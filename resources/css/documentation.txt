@@ -1,0 +1,28 @@
+CSS.
+	No CSS, temos diversos elementos que compõem o código. Começamos sempre pelo seletor que é que faz o link ou determina
+qual elemento receberá aquela propriedade. Exemplo: .módulo { padding: 1.25 rem; } onde ".módulo" representa o seletor. Como o 
+diz o seletor seleciona o elemento que receberá aquela propriedade. No seletor podemos utilizar, como no exemplo acima, um nome
+com um ponto na frente que representa uma classe, essa classe que será chamado no código html, com uma #id que seria 
+basicamente a id definida dentro da tag no html, ou mesmo chamando uma tag, essas três opções podem ser usadas para linkar a
+um estilo CSS.
+	Após a definição do seletor, partimos para as propriedades, que são as definições de estilo escolhidas para o widget.
+	Esses dois itens, formam o que chamamos de Rule Set (conjunto de regras)
+
+	Para utilizar o CSS com HTML, podemos fazer de 3 maneiras, um inline, ou seja, dentro da própria tag definimos a 
+propriedade "style=" e inserimos então as propriedades para aquela tag. A segunda opção, é na tag "head" definirmos todas as propriedades para todo o projeto e deixar que sejam aplicadas assim ou 
+vinculá-las a tag específica. Mas o modo mais usado, é criar um arquivo CSS juntamente com o arquivo HTML e linkar um ao outro. E para fazer isso, no <head> do nosso código HTML, utilizamos a tag
+<link> para chamar as propriedades dentro do arquivo CSS. Exemplo: < link href = "style.css" rel = "stylesheet" />, onde nosso arquivo CSS é o "style.css".
+
+	Dentro do arquivo CSS, caso optemos para seletor, a classe, iniciaremos o código criando esse vínculo. Para esse vínculo, utilizaremos o id, que será usado ou pode já estar definido para 
+realizar esse vínculo. 
+	Com os nosso elementos, sempre hávera um espaçamento entre um elemento e outro, e esse espaço é dividido em algumas partes, como o margin, border e padding. O margin é a distancia entre
+a borda externa da "box" do elemento para o próximo. Border, é o tamanho da borda dessa "box". Padding é a distancia entre o objeto dentro dessa "box" e a parede interna. É como se fosse uma caixa,
+margin é a distância de uma caixa para outra no "estoque", border seria como se fosse a espessura do papelão dessa caixa e padding é a distância do objeto dentro da caixa para a parede do papelão. 
+Com essas propriedades, podemos estilizar e posicionar diversos elementos na nossa página. Um detalhe, no border, sempre são chamados 3 propriedades, o tamanho, tipo e cor. 
+Exemplo: #texto { border: 2px solid #313211 }, você também pode definir propriedades de forma separada. 
+Exemplo:
+	#texto {
+		border-color: #313211;
+		border-style: solid;
+		border-width: 2px;
+	}

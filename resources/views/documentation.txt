@@ -1,0 +1,105 @@
+HTML:
+
+	Curso rápido durante a criação de uma proótipo de site, iniciando com os conceitos básicos e se aprofundando.
+
+	O HTML é básicamente o 'esqueleto' do seu site, ele representa a estruturação do seu site, nele, determinamos seu parâmetros atraves de tags, que por sua vez, formam elementos do site, abaixo,
+trarei alguns exemplos de tags e como podemos aplicar ela no nosso código.
+
+	Para todo site é necessário um título, e dentro do HTML, existe a tag <h1> que representa o título principal do site, é aquele que aparece no topo da página e com maior destaque também.
+ Um exemplo usando a tag, é assim: <h1> Olá, seja muito bem vindo! </h1>. Lembrando também que o <h1> só pode ser usado uma vez por site.
+	Existem variações dessa tag que são os <h2>, <h3>, <h4>, <h5> e <h6> e todos eles seguem uma hierarquia de importancia, cada um tendo um valor maior que o próximo e menor que o anterior, por 
+exemplo: <h1> > <h2> > ... > <h6>. Esse "subtítulos" podem ser usados várias vezes no página, inclusive são usados para criar tópicos na construção do site.
+	
+	Quando for fazer a construção do 'esqueleto', sempre deve-se iniciar informando qual o tipo de documento está sendo criado, e para isso utilizamos a declaração <!DOCTYPE>, junto a ela informamos
+a versão do nosso html, atualmente sendo o html5, no nosso caso, escreveremos <!DOCTYPE html>. O <!DOCTIPE> apesar de parecer, não é bem considerado uma tag e mais uma declaração, pois informa um dado
+referente a nossa versão de desenvolvimento e não necessáriamente uma informação para o site.
+
+	Após isso, precisamos criar o 'Root' do nosso site, a tag raiz que é estarão todos os componentes da nossa página, ela é obrigatória para a criação de um 'esqueleto' com uma boa semântica. Essa 
+tag raiz deve ser construida da seguinte maneira <html> </html>, e entre as tags de abertura e fechamento, deve ser feita toda a construção do seu site.
+
+	Inicialmente, precisamos sempre informar para o navegador, dados que somente ele precisa saber para a interpretação do código, são informações que não aparecem para o usuário, mas que são
+importantes para as informações que serão inseridas abaixo. Essas informações são chamadas de Metadados. Todos os metadados são definidos dentro da tag <head> (cabeça em inglês)
+	A construção da página é divida em partes, como vimos antes, o <head> é a cabeça do nosso 'esqueleto', onde estão as informações necessárias para definir nosso titulo, caracteristicas para
+busca, coisas que não aparecem mas que quando realizamos uma pesquisa, essa informações estão lá. E o <body> (corpo em inglês) que é onde os elementos gráficos se encontram. A construção do nosso código
+fica inicialmente assim:
+
+<!DOCTYPE html>
+<html>
+	<head></head>    «- Sendo aqui os metadados;
+	<body></body>	 «- E aqui os elementos gráficos;
+</html>
+
+
+	Sempre que for fazer a construção do código e for inserir uma tag dentro de outra (tag filho dentro da tag pai), usa-se o Tab para organizar a posição das tags, isso se chama identação, e ajuda na
+organização e facilita trabalhos em cima do seu código.	
+
+	Quanto ao <head> devemos iniciar, como dito anteriormente, com os metadados e um deles é o <title> que é o título da nossa página. A construção dele deve ser a seguinte 
+<title> Titulo de Escolha </title>. Esse metadado não aparece na página, mas informa ao navegador o nome do projeto, ele também é o título que aparece na aba de navegação.
+	A seguir, podemos utilizar a tag <meta>. Você verá que ela não possui fechamento, pois é uma tag vazia. Para inserir informações, utilizamos os atributos a tag, que são quem define as 
+caracteristicas dessa tag. Os atributos são definidos dentro da própria tag, exemplo: <meta name="descriptio">, onde esse "name=" indica que essa tag é de descrição.
+	Como mostrado acima, o atributo "name=" serve para informar o tipo dessa tag. Juntamente com o "name=", vem o "content=" que é o conteúdo dessa tag, o que faz ela ser uma tag de descrição.
+	Após definir todas as tag de metadados, partiremos para o <body> que é o corpo do nosso 'esqueleto'. Para cada parte desse corpo, temos tags específicas que definem cada uma, começando pelo <header>
+(cabeçalho em inglês), representa o início da nossa página, as primeiras informações contidas no topo da nossa página. Seguido da tag <main> que representa todo conteúdo gráfico no meio da nossa página.
+E para finalizar temos o <footer> (rodapé), que normalmente são aquelas informações que aparecem na parte inferior da página. Podemos notar que dessa maneira, nosso código já começa a tomar forma, 
+definindo elementos pais e filho. Abaixo, veja nossa construção até agora:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Titulo da página </title>
+		<meta name = "description" content = "Breve descrição do que é a página">
+	</head>
+	<body>
+		<header>
+		</heade>
+		<main>
+		</main>
+		<footer>
+		</footer>
+	</body>
+</html>
+
+	Podemos perceber que os primeiros elementos já estão començando a aparecer e dando forma para a nossa página.
+	Para iniciar nossa interface gráfica (<main>) podemos começar usando uma tag que já vimos anteriormente, o <h1> que é nossa tag de título principal, aquele título grande que aparece no topo 
+da nossa página. Nesse caso faremos <h1> Titulo do site </h1>. Após o título, é sempre bom inserir uma descrição, um parágrafo sobre o que é o nosso site. Para essa descrição, utilizamos a tag <p>, ficando 
+<p> Descrição do nosso site </p>. Muitas vezes a descrição vai ficar muito extensa e podemos fazer a quebra de linhas utilizando a tag <br>.
+	Após as configurações iniciais,podemos partir para o <main> que é onde estarão todas as partes interativas do nosso site. Para uma contrução mais "limpa" e de forma mais organizada, utilizaremos a
+tag <section> que divide nosso <main> em sessões, deixando nosso código mais organizado e não poluído, como se colocassemos tudo direto na nossa <main>. Dentro dessa sessão, podemos definir vários elementos
+e atributos que darão a 'personalidade' para cada parte.
+	Para começar, vamos iniciar com um título, e utilizaremos a tag <h2> que seria o segundo título na ordem hierarquica, lembrando que esse pode ser repitido várias vezes no código, pois a tag remete a
+formatação do titulo e não o texto definido em si. Na primeira sessão, podemos utilizar do <h2> junto com <p> para adicionar descrições mais detalhadas sobre a nossa página, informações que são relevantes 
+para o usuário entender o propósito do nosso site.
+	No html, existem tag usadas para manipular certas partes do texto, uma delas é a tag <strong> que serve para destacar uma parte do texto. Essa tag deixa parte do texto destacado em negrito. Existe 
+também a tag <em> que também serve para destacar um parte do texto, mas de uma forma menos hierarquica que a <strong>, deixando o texto destacado em Italico. Existem as tag de destaque visual como a <b> 
+para negrito e <i> para italico, mas essas duas somente destacam visualmente. Junto com essas, uma das mais usadas é a tag <br> que é usada para quebra de linha, quando um texto é muito grande e não quer
+que ele ultrapasse o limite da tela, usamos o <br> para que uma parte do texto va para a linha de baixo. Uma das tags muito utilizadas também é a <abbr> que serve para destacar uma abreviação no texto,
+quando há uma palavra abreviada no texto e o cliente passa o cursor do mouse por cima, ela mostra uma pequena caixa suspensa nos dando o significado dessa abreviação. Sua construção é feita da seguinte
+maneira: <abbr title="nome completo"> Abreviação </abbr>.
+	Dentro do nosso código podemos deixar comentários, que são textos que não são renderizados para o cliente, somente aparecem no seu código para descrever certas partes do código, ajudando a 
+identificar certas partes do texto. Ele pode ser feito utilizando as teclas <!--Comentário aqui-->.
+
+Nosso código até agora:
+<!DOCTYPE html>
+<html>
+	<hean>
+		<title> Título da página </title>
+		<meta name = "description" content = " Descrição da página aqui">
+	</head>
+	<body>
+		<header>
+			<section>
+			</section>
+		</header>
+		<main>
+			<section>
+			</section>
+		</main>
+	</body>
+</html>
+
+	Partindo para a parte funcional, podemos agora criar uma nova <section>, onde iremos inserir os elementos interativos para o usuário. A tag <form> significa que será construido um formulário, onde essa
+informação, posteriormente com JavaScript, será usada para alguma ação. Dentro desse formuário precisamos definir no input, e como o próprio nome diz <input> é a tag utilizada, nela que determinaremos 
+qual tipo de entrada será exibida. Para definir qual tipo de entrada teremos, utilizamos o atributo "type=". Após escrito o tipo de entrada, precisamos definir novos atributos de acordo com o tipo de 
+entrada escolhida, caso seja um type "text", podemos definir limites de caracteres, se é obrigatório ou não, verificarção de caracteres entre outros. Já o atributo "id" serve para interagir com o JS no
+futuro, pois é com base nesses ids que irão definir os próximos passos. O "name" serve para nós linkarmos a opção ou resultado a alguma outra tag. 
+	Para exibir um texto juntamente ao input, utilizamos a tag <label> nessa vinculamos o id que definimos anteriormente dentro do input, para criar esse vinculo entre o input e o label.
