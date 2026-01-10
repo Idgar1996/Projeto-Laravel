@@ -3,11 +3,19 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return view('index');
+});
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('/contact', function () {
+  return view('contact');
+});
 
-require __DIR__.'/settings.php';
+Route::get('/about_us', function () {
+    return view("about_us");
+});
+Route::get("/mensagem", function () {
+    return view("mensagem");
+});
+Route::get("/servicos", function () {
+    return view("servicos");
+});
