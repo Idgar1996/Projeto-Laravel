@@ -5,13 +5,13 @@
         <meta name="description" content="Site de orçamentos para aberturas de aluminio ">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        <link href="../css/contact.css" rel="stylesheet"/>
+        <link href="{{ asset('css/contact.css') }}" rel="stylesheet"/>
         <base href="https://localhost/meu-site/">
     </head>
     <body class="corpo">
         <header class="header">
             <a href="/index.php">
-                <img src="/meu-site/imagens/logo/logo_alusim1.png" alt="Logo Alusim" class="logo" title="Logo Alusim">
+                <img src="{{ asset('imagens/logo/logo_alusim1.png') }}" alt="Logo Alusim" class="logo" title="Logo Alusim">
             </a> 
             <aside class="aside">
                     <nav class="menu-nav">
@@ -35,7 +35,7 @@
                 <div class="nossos-contatos">
                     <div class="info-box">
                         <div>
-                            <img src="/meu-site/imagens/icones/icone-fone.png" alt="icone telefone" class="icones">
+                            <img src="{{ asset('imagens/icones/icone-fone.png') }}" alt="icone telefone" class="icones">
                         </div>
                         <div>
                             <h2>Telefone:</h2>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="info-box">
                         <div>
-                            <img src="/meu-site/imagens/icones/icone-email.png" alt="icone e-mail" class="icones">
+                            <img src="{{ asset('imagens/icones/icone-email.png') }}" alt="icone e-mail" class="icones">
                         </div>
                         <div class="">
                             <h2>E-mail:</h2>
@@ -53,7 +53,7 @@
                     </div>
                     <div  class="info-box">
                         <div>
-                            <img src="/meu-site/imagens/icones/icone-location.png" alt="icone localização" class="icones">
+                            <img src="{{ asset('imagens/icones/icone-location.png') }}" alt="icone localização" class="icones">
                         </div>
                         <div>
                             <h2>Localização</h2>

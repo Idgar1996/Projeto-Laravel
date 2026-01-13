@@ -5,12 +5,12 @@
         <meta name="description" content="Site de orçamentos para aberturas de aluminio ">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        <link href="/meu-site/css/about_us.css" rel="stylesheet"/>
+        <link href="{{ asset('css/about_us.css') }}" rel="stylesheet"/>
     </head>
     <body class="corpo">
         <header class="header">
             <a href="/meu-site/index.php">
-                <img src="/meu-site/imagens/logo/logo_alusim1.png" alt="Logo Alusim" class="logo" title="Logo Alusim">
+                <img src="{{ asset('imagens/logo/logo_alusim1.png') }}" alt="Logo Alusim" class="logo" title="Logo Alusim">
             </a>
             <aside class="aside">
                     <nav class="menu-nav">
@@ -37,12 +37,12 @@
                         <p id="">Bem-vindo ao equilíbrio perfeito entre <b>estilo e custo-benefício</b>. Sua abertura de alumínio personalizada, combinando beleza, funcionalidade e um valor que surpreende. Transforme sua casa com a leveza e durabilidade do alumínio. Criamos aberturas sob medida, que refletem seu estilo e se adaptam ao seu projeto. <b><i>E o melhor</i></b>: uma solução exclusiva que valoriza seu espaço e cabe no seu orçamento.</p>
                     </div>
                     <div class="">
-                        <img src="/meu-site/imagens/sobre-nos/bem-vindo.png" alt="Imagem de Boas Vindas" class="">
+                        <img src="{{ asset('imagens/sobre-nos/bem-vindo.png') }}" alt="Imagem de Boas Vindas" class="">
                     </div>
                 </section>
                 <section class="">
                     <div class="">
-                        <img src="/meu-site/imagens/sobre-nos/nossa-fabrica.png" alt="Nossa Fábrica" class="">
+                        <img src="{{ asset('imagens/sobre-nos/nossa-fabrica.png') }}" alt="Nossa Fábrica" class="">
                     </div>
                     <div class="">
                         <h2 title="historia" class="">Nossa história</h2>
@@ -61,7 +61,7 @@
                         Hoje, seguimos firmes no propósito que nos trouxe até aqui: entregar soluções inteligentes, seguras e alinhadas ao que há de mais atual no setor de esquadrias — sempre guiados pela paixão que nos move desde o primeiro dia.</p>
                     </div>
                     <div class="">
-                        <img src="/meu-site/imagens/sobre-nos/equipe.png" alt="Equipe" class="">
+                        <img src="{{ asset('imagens/sobre-nos/equipe.png') }}" alt="Equipe" class="">
                     </div>
                 </section>
             </div>
