@@ -10,22 +10,22 @@
     </head>
     <body class="body">
         <header class="header">
-            <a href="/meu-site/index.php">
+            <a href="{{ route("index") }}">
                 <img src="{{ asset('imagens/logo/logo_alusim1.png') }}" alt="Logo Alusim" class="logo" title="Logo Alusim">
             </a>
             <aside class="aside">
                     <nav class="menu-nav">
                         <div class="menu-item">
-                            <a href="/meu-site/php/index.php" class="links">Home</a>
+                            <a href="{{ route("index") }}" class="links">Home</a>
                         </div>
                         <div class='menu-item'>
-                            <a href="/meu-site/php/servicos.php" class="links">Fotos</a>
+                            <a href="{{ route("servicos") }}" class="links">Fotos</a>
                         </div>
                         <div class="menu-item">
-                            <a href="/meu-site/php/about_us.php" class="links">Sobre nós</a>
+                            <a href="{{ route("about_us") }}" class="links">Sobre nós</a>
                         </div>
                         <div class="menu-item">
-                            <a href="/meu-site/php/contact.php" class="links">Contato</a>
+                            <a href="{{ route("contact") }}" class="links">Contato</a>
                         </div>
                     </nav>
             </aside>

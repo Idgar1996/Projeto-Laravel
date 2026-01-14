@@ -9,7 +9,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Cabin", sans-serif;
+    font-family: "Inter", sans-serif;
     box-sizing: border-box;
 }
 
@@ -103,6 +103,18 @@ body {
 .main {
     padding:20px;
 }
+.fieldset {
+    border-radius: 12px;
+    border-width: 3px;
+    border-color: #333333;
+    border-style: solid;
+}
+.LegendFieldset {
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 5px;
+}
 .campo_mensagem {
     display: flex;
     flex-direction: column;
@@ -111,19 +123,30 @@ body {
 .dados_cliente {
     display: flex;
     justify-content: space-around;
+    width: auto;
+    height: 200px;
 }
-.dados_pessoais {
+.dados{
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
-.dados_contato {
+.campo {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    font-size: 18px;
 }
-.dados_abertura {
-    display: flex;
-    flex-direction: column;
+.campo input:is([type="text"], [type="tel"], [type="email"]) {
+    width: 250px;
+    height: 30px;
+    border-radius: 4px;
+    border: 2px solid #333333;
+    font-size: 18px;
+    padding: 0 0 0 10px;
+    font-variant-caps: normal;
 }
+
 .aba_mensagem {
     display: flex;
     flex-direction: column;

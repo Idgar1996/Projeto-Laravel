@@ -6,26 +6,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
         <link href="{{ asset('css/contact.css') }}" rel="stylesheet"/>
-        <base href="https://localhost/meu-site/">
     </head>
     <body class="corpo">
         <header class="header">
-            <a href="/index.php">
+            <a href="{{ route("index") }}">
                 <img src="{{ asset('imagens/logo/logo_alusim1.png') }}" alt="Logo Alusim" class="logo" title="Logo Alusim">
             </a> 
             <aside class="aside">
                     <nav class="menu-nav">
                         <div class="menu-item">
-                            <a href="/meu-site/php/index.php" class="links">Home</a>
+                            <a href="{{ route("index") }}" class="links">Home</a>
                         </div>
                         <div class='menu-item'>
-                            <a href="/meu-site/php/servicos.php" class="links">Fotos</a>
+                            <a href="{{ route("servicos") }}" class="links">Fotos</a>
                         </div>
                         <div class="menu-item">
-                            <a href="/meu-site/php/about_us.php" class="links">Sobre nós</a>
+                            <a href="{{ route("about_us") }}" class="links">Sobre nós</a>
                         </div>
                         <div class="menu-item">
-                            <a href="/meu-site/php/contact.php" class="links">Contato</a>
+                            <a href="{{ route("contact") }}" class="links">Contato</a>
                         </div>
                     </nav>
             </aside>
@@ -66,7 +65,7 @@
                         <h2>Ou se preferir...</h2>
                         <p>Clique no no botão abaixo e será direcionado a página de mensagem, onde você poderá descrever com detalhes suas necessidades e desejos</p>
                     </div>
-                    <a href="/meu-site/php/mensagem.php" class="links">Mensagem</a>
+                    <a href="{{ route('mensagem') }}" class="links">Mensagem</a>
                 </div>
             </section>
         </main>
