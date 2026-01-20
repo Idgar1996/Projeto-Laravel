@@ -5,27 +5,26 @@
         <meta name="description" content="Site de orçamentos para aberturas de aluminio ">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        <link href="/meu-site/css/servicos.css" rel="stylesheet"/>
-        <base href="https://localhost/meu-site/">
+        <link href="{{ asset('css/servicos.css') }}" rel="stylesheet"/>
     </head>
     <body class="body">
         <header class="header">
-            <a href="/meu-site/index.php">
-                <img src="/meu-site/imagens/logo/logo_alusim1.png" alt="Logo Alusim" class="logo" title="Logo Alusim">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('imagens/logo/logo_alusim1.png') }}" alt="Logo Alusim" class="logo" title="Logo Alusim">
             </a>
             <aside class="aside">
                     <nav class="menu-nav">
                         <div class="menu-item">
-                            <a href="/meu-site/php/index.php" class="links">Home</a>
+                            <a href="{{ route('home') }}" class="links">Home</a>
                         </div>
                         <div class='menu-item'>
-                            <a href="/meu-site/php/servicos.php" class="links">Fotos</a>
+                            <a href="{{ route('servicos') }}" class="links">Fotos</a>
                         </div>
                         <div class="menu-item">
-                            <a href="/meu-site/php/about_us.php" class="links">Sobre nós</a>
+                            <a href="{{ route('about') }}" class="links">Sobre nós</a>
                         </div>
                         <div class="menu-item">
-                            <a href="/meu-site/php/contact.php" class="links">Contato</a>
+                            <a href="{{ route('contact') }}" class="links">Contato</a>
                         </div>
                     </nav>
             </aside>

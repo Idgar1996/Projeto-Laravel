@@ -10,7 +10,7 @@
     <body>
         <header class="header">
             <a href="{{ route('home') }}">
-                <img src="/meu-site/imagens/logo/logo_alusim1.png" alt="Logo Alusim" class="logo" title="Logo Alusim">
+                <img src="{{ asset('imagens/logo/logo_alusim1.png')}}" alt="Logo Alusim" class="logo" title="Logo Alusim">
             </a>
             <aside class="aside">
                     <nav class="menu-nav">

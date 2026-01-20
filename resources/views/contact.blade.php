@@ -5,27 +5,107 @@
         <meta name="description" content="Site de orçamentos para aberturas de aluminio ">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        <link href="../css/contact.css" rel="stylesheet"/>
-        <base href="https://localhost/meu-site/">
+        <link href="{{ asset('css/contact.css')}}" rel="stylesheet"/>
     </head>
     <body class="corpo">
+        @if(session('success'))
+        <div id="successAlert" style="
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #0f5132;
+            font-size: 26px;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 9999;
+            max-width: 500px;
+            width: 400px;
+            heigth: 40px;
+            text-align: center;
+            animation: slideIn 0.3s ease;">
+
+            <div style="
+                display: flex; 
+                justify-content: space-between; 
+                align-items: start;">
+                <div style="
+                    display: flex; 
+                    align-items: start; 
+                    gap: 10px;">
+                    <span style="font-size: 22px;">✅</span>
+                    <span>{{ session('success') }}</span>
+                </div>
+                <button onclick="fecharAlert()" style="
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 30px;
+                    cursor: pointer;
+                    padding: 0;
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 15px;
+                ">&times;</button>
+            </div>
+        </div>
+
+        <script>
+            function fecharAlert() {
+                const alert = document.getElementById('successAlert');
+                alert.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => {
+                    alert.style.display = 'none';
+                }, 300);
+            }
+            
+            // Fecha automaticamente após 5 segundos
+            setTimeout(fecharAlert, 5000);
+        </script>
+
+        <style>
+            @keyframes slideIn {
+                from { 
+                    opacity: 0;
+                    transform: translateX(-50%) translateY(-40px);
+                }
+                to { 
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0);
+                }
+            }
+            
+            @keyframes fadeOut {
+                from { 
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0);
+                }
+                to { 
+                    opacity: 0;
+                    transform: translateX(-50%) translateY(-40px);
+                }
+            }
+        </style>
+        @endif
         <header class="header">
-            <a href="/index.php">
-                <img src="/meu-site/imagens/logo/logo_alusim1.png" alt="Logo Alusim" class="logo" title="Logo Alusim">
+            <a href="{{ route('home')}}">
+                <img src="{{ asset('imagens/logo/logo_alusim1.png')}}" alt="Logo Alusim" class="logo" title="Logo Alusim">
             </a> 
             <aside class="aside">
                     <nav class="menu-nav">
                         <div class="menu-item">
-                            <a href="/meu-site/php/index.php" class="links">Home</a>
+                            <a href="{{ route('home')}}" class="links">Home</a>
                         </div>
                         <div class='menu-item'>
-                            <a href="/meu-site/php/servicos.php" class="links">Fotos</a>
+                            <a href="{{ route('servicos')}}" class="links">Fotos</a>
                         </div>
                         <div class="menu-item">
-                            <a href="/meu-site/php/about_us.php" class="links">Sobre nós</a>
+                            <a href="{{ route('about')}}" class="links">Sobre nós</a>
                         </div>
                         <div class="menu-item">
-                            <a href="/meu-site/php/contact.php" class="links">Contato</a>
+                            <a href="{{ route('contact')}}" class="links">Contato</a>
                         </div>
                     </nav>
             </aside>
@@ -35,7 +115,8 @@
                 <div class="nossos-contatos">
                     <div class="info-box">
                         <div>
-                            <img src="/meu-site/imagens/icones/icone-fone.png" alt="icone telefone" class="icones">
+                            <img src="{{ asset('/imagens/icones/icone-fone.png
+                            ') }}" alt="icone telefone" class="icones">
                         </div>
                         <div>
                             <h2>Telefone:</h2>
@@ -44,7 +125,7 @@
                     </div>
                     <div class="info-box">
                         <div>
-                            <img src="/meu-site/imagens/icones/icone-email.png" alt="icone e-mail" class="icones">
+                            <img src="{{ asset('/imagens/icones/icone-email.png') }}" alt="icone e-mail" class="icones">
                         </div>
                         <div class="">
                             <h2>E-mail:</h2>
@@ -53,7 +134,7 @@
                     </div>
                     <div  class="info-box">
                         <div>
-                            <img src="/meu-site/imagens/icones/icone-location.png" alt="icone localização" class="icones">
+                            <img src="{{ asset('/imagens/icones/icone-location.png') }}" alt="icone localização" class="icones">
                         </div>
                         <div>
                             <h2>Localização</h2>
@@ -66,7 +147,7 @@
                         <h2>Ou se preferir...</h2>
                         <p>Clique no no botão abaixo e será direcionado a página de mensagem, onde você poderá descrever com detalhes suas necessidades e desejos</p>
                     </div>
-                    <a href="/meu-site/php/mensagem.php" class="links">Mensagem</a>
+                    <a href="{{ route('mensagem') }}" class="links">Mensagem</a>
                 </div>
             </section>
         </main>
