@@ -103,28 +103,3 @@ body {
 .main {
     padding:20px;
 }
-.campo_mensagem {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-.dados_cliente {
-    display: flex;
-    justify-content: space-around;
-}
-.dados_pessoais {
-    display: flex;
-    flex-direction: column;
-}
-.dados_contato {
-    display: flex;
-    flex-direction: column;
-}
-.dados_abertura {
-    display: flex;
-    flex-direction: column;
-}
-.aba_mensagem {
-    display: flex;
-    flex-direction: column;
-}
