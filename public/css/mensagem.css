@@ -16,7 +16,7 @@
 body {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     justify-content: space-between;
     background-image: linear-gradient(to bottom,
@@ -100,60 +100,61 @@ body {
     height: 30px;
 }
 
-.form {
+/* Aba mensagem, local para estilizar os campos de inserção de dados e envio da mensagem */
+
+.main {
+    max-width: 100%;
+    padding: 20px;
+}
+.fieldset {
     width: 100%;
-    height: auto;
-    padding:20px;
-    gap: 40px;
+    padding: 10px;
+    border: 2px #333333 solid;
+    border-radius: 12px;
+}
+.legend {
+    margin-left: 50px;
+    padding: 10px;
+}
+.formulario {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.dados {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
+    gap: 30px;
 }
 .dados_pessoais {
-    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
     gap: 10px;
 }
-.dados_obra {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.entradas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px 0 20px;
 }
-.mensagem {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    align-items: center;
+.entradas > h2 {
+    padding: 20px;
 }
-
 .campos {
-    height: 30px;
-    width: 60%;
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    font-size: 22px;
+    align-items: center;
+    gap: 8px;
 }
-.campos > input {
-    height: 30px;
-    width: 250px;
-    padding: 5px;
-    font-size: 20px;
+.campos label {
+    white-space: nowrap;
 }
-#cidade {
-    color: black;
+.campos input {
+    flex: 1;
+    height: 25px;
 }
-.campos > select {
-    height: 30px;
-    width: 100px;
+.campos select {
+    flex: 0.25;
+    height: 25px;
     text-align: center;
+}
+/* Customização entradas: */
+
+#nome {
+   flex: 0.5 ;
 }
