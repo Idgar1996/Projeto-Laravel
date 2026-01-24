@@ -33,35 +33,36 @@
         <main class="main">
             <fieldset class="fieldset">
                 <legend class="legend"><h1>Cadastro:</h1></legend>
-                <form action="" method="POST" class="formulario">
+                <form action="home.blade.php"  method="POST" class="formulario">
+                    @csrf
                     <section class="dados_pessoais">
                         <div class="entradas">
                             <div class="campos">
-                                <label for="nome">Digite seu nome:</label>
-                                <input type="text" name="nome" id="nome" required>
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome" required title="Digite seu primeiro nome" placeholder="Ex: João">
                             </div>
                             <div class="campos">
-                                <label for="sobrenome">Digite seu sobrenome:</label>
-                                <input type="text" name="sobrenome" id="sobrenome" required>
-                            </div>
-                            <div class="documento">
-                                <label for="documento">Digite seu documento:</label>
-                                <input type="text" name="documento" id="documento" required>
-                            </div class="campos">
-                        </div>
-                        <div class="entradas">
-                            <div class="campos">
-                                <label for="telefone">Digite seu telefone:</label>
-                                <input type="tel" name="telefone" id="telefone" required>
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input type="text" name="sobrenome" id="sobrenome" required title="Digite seu sobrenome completo" placeholder="Ex: da Silva">
                             </div>
                             <div class="campos">
-                                <label for="email">Digite seu e-mail:</label>
-                                <input type="email" name="email" id="email">
+                                <label for="documento">Documento:</label>
+                                <input type="text" name="documento" id="documento" required placeholder="Ex: 999.999.999-99">
                             </div>
                         </div>
                         <div class="entradas">
                             <div class="campos">
-                                <label for="estado">Selecione o seu estado:</label>
+                                <label for="telefone">Telefone:</label>
+                                <input type="tel" name="telefone" id="telefone" required class="input" placeholder="Ex: (99) 99999-9999">
+                            </div>
+                            <div class="campos">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email" placeholder="Ex: email@email.com">
+                            </div>
+                        </div>
+                        <div class="entradas">
+                            <div class="campos">
+                                <label for="estado">Estado:</label>
                                 <select name="estado" id="estado" required>
                                     <option value="acre">AC</option>
                                     <option value="alagoas">AL</option>
@@ -82,7 +83,7 @@
                                     <option value="piaui">PI</option>
                                     <option value="rio_de_janeiro">RJ</option>
                                     <option value="rio_grande_do_norte">RN</option>
-                                    <option value="rio_grande_do_sul">RS</option>
+                                    <option value="rio_grande_do_sul" selected>RS</option>
                                     <option value="rondonia">RO</option>
                                     <option value="roraima">RR</option>
                                     <option value="santa_catarina">SC</option>
@@ -93,28 +94,29 @@
                                 </select>
                             </div>
                             <div class="campos">
-                                <label for="cep">Digite seu CEP:</label>
-                                <input type="text" name="cep" id="cep" required>
+                                <label for="cep">CEP:</label>
+                                <input type="text" name="cep" id="cep" required placeholder="Ex: 99999-99">
                             </div>
                             <div class="campos">
-                                <label for="cidade">Sua cidade:</label>
+                                <label for="cidade">Cidade:</label>
                                 <input type="text" name="cidade" id="cidade" disabled>
                             </div>
                         </div>
                         <div class="entradas">
                             <div class="campos">
-                                <label for="rua">Digite o nome da sua rua:</label>
-                                <input type="text" name="rua" id="rua" required>
+                                <label for="rua">Rua:</label>
+                                <input type="text" name="rua" id="rua" required placeholder="Ex: João da Silva">
                             </div>
                             <div class="campos">
-                                <label for="numero">Digite o número:</label>
-                                <input type="text" name="numero" id="numero" required>
+                                <label for="numero">Número:</label>
+                                <input type="text" name="numero" id="numero" required placeholder="Ex: 100">
                             </div>
                             <div class="campos">
-                                <label for="bairro">Digite seu bairro:</label>
-                                <input type="text" name="bairro" id="bairro" required>
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" name="bairro" id="bairro" required placeholder="Ex: Centro">
                             </div>
-                        </div>
+                        </div>                            
+                        <button type="reset" style="width: 100px;">Limpar campos</button>
                     </section>
                     <hr>
                     <section class="obra">
@@ -156,7 +158,6 @@
                         </div>
                         <div>
                             <button type="submit">Enviar</button>
-                            <button type="reset">Limpar campos</button>
                         </div>
                     </section>
                 </form>
