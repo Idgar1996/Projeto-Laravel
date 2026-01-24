@@ -125,42 +125,51 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
 }
 .entradas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
     padding: 0 20px 0 20px;
 }
-.entradas > h2 {
-    padding: 20px;
-}
 .campos {
-    display: flex;
+    display: grid;
+    grid-template-columns: 100px 1fr;
     align-items: center;
     gap: 8px;
-    justify-content: space-between;
 }
 .campos label {
     white-space: nowrap;
 }
 .campos input {
-    flex: 1;
-    height: 25px;
-    padding: 0 0 0 15px;
+    height: 30px;
+    padding: 0 0 0 10px;
+    border-radius: 5px;
+    border: #333333 1.5px solid;
+}
+.campos input:hover,
+.campos input:focus,
+.campos input:focus-visible {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 4px #7c797980;
+    border-radius: 5px;
 }
 .campos select {
-    flex: 0.25;
+    width: 100px;
     height: 25px;
     text-align: center;
 }
-/* Customização entradas: */
 
-#nome {
-    flex: 0.5;
+/* Customização entradas: */
+#numero, #cep {
+    width: 100px;
 }
 
-#cep {
-    flex: 0.5;
+#nome, #telefone, #bairro {
+    width: 250px;
+}
+
+#cidade {
+    border: transparent 0 solid;
 }
