@@ -44,9 +44,9 @@
                                 <label for="sobrenome">Digite seu sobrenome:</label>
                                 <input type="text" name="sobrenome" id="sobrenome" required>
                             </div>
-                            <div class="campos">
-                                <label for="cpf">Digite seu CPF:</label>
-                                <input type="text" name="cpf" id="cpf" required>
+                            <div class="documento">
+                                <label for="documento">Digite seu documento:</label>
+                                <input type="text" name="documento" id="documento" required>
                             </div class="campos">
                         </div>
                         <div class="entradas">
@@ -107,7 +107,7 @@
                                 <input type="text" name="rua" id="rua" required>
                             </div>
                             <div class="campos">
-                                <label for="numero">Digite o número da sua casa:</label>
+                                <label for="numero">Digite o número:</label>
                                 <input type="text" name="numero" id="numero" required>
                             </div>
                             <div class="campos">

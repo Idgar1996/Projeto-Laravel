@@ -140,6 +140,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-content: space-between;
 }
 .campos label {
     white-space: nowrap;
@@ -147,6 +148,7 @@ body {
 .campos input {
     flex: 1;
     height: 25px;
+    padding: 0 0 0 15px;
 }
 .campos select {
     flex: 0.25;
@@ -156,5 +158,9 @@ body {
 /* Customização entradas: */
 
 #nome {
-   flex: 0.5 ;
+    flex: 0.5;
+}
+
+#cep {
+    flex: 0.5;
 }

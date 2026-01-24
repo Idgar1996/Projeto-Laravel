@@ -1,7 +1,7 @@
 // public/js/mascaras.js - VERSÃO MAIS FÁCIL
 document.addEventListener('DOMContentLoaded', function() {
     const telefoneInput = document.getElementById('telefone');
-    const cpfInput = document.getElementById('cpf');
+    const documentoInput = document.getElementById('documento');
     const cepInput = document.getElementById('cep')
     
     if (telefoneInput) {
@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    if (cpfInput) {
-        cpfInput.addEventListener('input', function() {
+    if (documentoInput) {
+        documentoInput.addEventListener('input', function() {
             // Remove tudo que não é número
             let valor = this.value;
             let numeros = valor.replace(/\D/g, '');
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Permite navegar com setas normalmente
-        cpfInput.addEventListener('keydown', function(evento) {
+        documentoInput.addEventListener('keydown', function(evento) {
             const teclasPermitidas = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'];
             if (teclasPermitidas.includes(evento.key)) {
                 return; // Permite navegação
