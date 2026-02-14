@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\SolicitacaoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +28,13 @@ Route::get("/contact", function () {
 Route::get("/mensagem", [App\Http\Controllers\ClientController::class, 'show'])->name("mensagem");
 
 Route::post('/mensagem', [App\Http\Controllers\ClientController::class, 'enviar'])->name('mensagem');
+
+Route::post('/salvar', [SolicitacaoController::class, 'store'])->name('salvar');
+
+Route::get('/mensagem', function () {
+    return view('mensagem');
+})->name('mensagem.enviada');
+
 
 // Route::get('/formulario', [FormController::class, 'mostrarFormulario']);
 

@@ -77,7 +77,6 @@ body {
     color: #333333;
     font-size: 28px;
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
     display:block;
     padding: 12px 15px;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -115,6 +114,7 @@ body {
 .legend {
     margin-left: 50px;
     padding: 10px;
+    color:#333333;
 }
 .formulario {
     display: flex;
@@ -137,7 +137,7 @@ body {
     display: grid;
     grid-template-columns: 100px 1fr;
     align-items: center;
-    gap: 8px;
+    gap: 3px;
 }
 .campos label {
     white-space: nowrap;
@@ -159,6 +159,13 @@ body {
     width: 100px;
     height: 25px;
     text-align: center;
+    background-color: white;
+    border: 1.5px #333333 solid;
+    border-radius: 5px;
+}
+.documentos{
+    display: flex;
+    gap: 20px;
 }
 
 /* Customização entradas: */
@@ -172,4 +179,120 @@ body {
 
 #cidade {
     border: transparent 0 solid;
+}
+
+.reset {
+    background-color: transparent;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 12px 10px;
+    width: 200px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 10px;
+    border-color: #333333;
+    border-width: 0 0 0 0;
+    box-shadow: 1px 1px 2px #7c797980;
+}
+.reset:hover{
+    transform: scale(1.1);
+    color: crimson;
+    text-shadow: 1px 1px 1px #333333;
+    box-shadow: 2px 2px 2px crimson;
+    border-radius: 10px;
+}
+
+.obra {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    padding: 0 0 0 25px;
+}
+
+.color {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.corEscolhida{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    border-color: #333333;
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.tipoObra{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.opcoesObra {
+    display: flex;
+    gap: 20px;
+}
+
+.remover {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.opcoesRemover {
+    display: flex;
+    gap: 20px;
+}
+
+.radios{
+    display: flex;
+    gap: 5px;
+}
+
+.areaMensagem {
+    padding: 0 25px 0 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.mensagem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.orientacao {
+    text-indent: 20px;
+    text-align: justify;
+}
+
+textarea {
+    border: #333333 1.5px solid;
+    border-radius: 8px;
+    padding: 10px 10px 10px 10px;
+}
+
+.btnEnviar {
+    background-color: transparent;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 12px 10px;
+    width: 200px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 10px;
+    border-color: #333333;
+    border-width: 0 0 0 0;
+    box-shadow: 1px 1px 2px #7c797980;
+}
+.btnEnviar:hover{
+    transform: scale(1.1);
+    color: green;
+    text-shadow: 1px 1px 1px #333333;
+    box-shadow: 2px 2px 2px green;
+    border-radius: 10px;
 }
