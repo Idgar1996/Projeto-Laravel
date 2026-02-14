@@ -33,7 +33,7 @@
         <main class="main">
             <fieldset class="fieldset">
                 <legend class="legend"><h1>Cadastro:</h1></legend>
-                <form action="home.blade.php"  method="POST" class="formulario">
+                <form action="{{ route('salvar') }}"  method="POST" class="formulario">
                     @csrf
                     <section class="dados_pessoais">
                         <div class="entradas">
@@ -47,7 +47,7 @@
                             </div>
                             <div class="campos">
                                 <label for="documento">Documento:</label>
-                                <input type="text" name="documento" id="documento" required placeholder="Ex: 999.999.999-99">
+                                <input type="text" name="documento" id="documento" required placeholder="Ex: 999.999.999-99 ou 99.999.999/9999-99">
                             </div>
                         </div>
                         <div class="entradas">
@@ -58,6 +58,17 @@
                             <div class="campos">
                                 <label for="email">E-mail:</label>
                                 <input type="email" name="email" id="email" placeholder="Ex: email@email.com">
+                            </div>
+                            <div class="documentos">
+                                <label>Tipo de documento:</label>
+                                <div>
+                                    <input type="radio" name="tipo_documento" value="cpf" checked>
+                                    <label for="cpf">CPF</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="tipo_documento" value="cnpj">
+                                    <label for="cnpj">CNPJ</label>
+                                </div>
                             </div>
                         </div>
                         <div class="entradas">
@@ -99,7 +110,8 @@
                             </div>
                             <div class="campos">
                                 <label for="cidade">Cidade:</label>
-                                <input type="text" name="cidade" id="cidade" disabled>
+                                <input type="text" name="cidade" id="cidade" value="" readonly>
+                                
                             </div>
                         </div>
                         <div class="entradas">
@@ -115,54 +127,74 @@
                                 <label for="bairro">Bairro:</label>
                                 <input type="text" name="bairro" id="bairro" required placeholder="Ex: Centro">
                             </div>
-                        </div>                            
-                        <button type="reset" style="width: 100px;">Limpar campos</button>
+                        </div>
+                        <div class="entradas">                            
+                            <button type="reset" class="reset">Limpar campos</button>
+                        </div>
                     </section>
                     <hr>
                     <section class="obra">
                         <h2>Informações sobre a obra:</h2>
-                        <div>
+                        <div class="color">
                             <label for="cor">Selecione a cor para o seu orçamento:</label>
-                            <select name="cor" id="cor">
-                                <option value="branco">Branco</option>
-                                <option value="preto">Preto</option>
-                                <option value="cinza">Cinza</option>
-                                <option value="marrom">Marrom</option>
-                                <option value="bronze">Bronze</option>
-                                <option value="amadeirado">Amadeirado</option>
+                            <select name="cor" id="cor" class="corEscolhida">
+                                <option value="branco">BRANCO</option>
+                                <option value="preto">PRETO</option>
+                                <option value="cinza">CINZA</option>
+                                <option value="marrom">MARROM</option>
+                                <option value="bronze">BRONZE</option>
+                                <option value="amadeirado">AMADEIRADO</option>
                             </select>
                         </div>
-                        <div>
+                        <div class="tipoObra">
                             <p for="tipo_obra">Selecione o tipo de obra:</p>
-                            <label>Reforma</label>
-                            <input type="radio" name="tipo_obra" id="reforma">
-                            <label>Nova</label>
-                            <input type="radio" name="tipo_obra" id="nova">
-                            <label>Ampliação</label>
-                            <input type="radio" name="tipo_obra" id="ampliação">
+                            <div class="opcoesObra">
+                                <div class="radios">
+                                    <input type="radio" name="tipo_obra" id="reforma" checked value="Reforma">
+                                    <label>Reforma</label>
+                                </div>
+                                <div class="radios">
+                                    <input type="radio" name="tipo_obra" id="nova" value="Nova">
+                                    <label>Nova</label>
+                                </div>
+                                <div class="radios">
+                                    <input type="radio" name="tipo_obra" id="ampliação" value="Ampliação">
+                                    <label>Ampliação</label>
+                                </div>
+                            </div>
                         </div>
-                        <div>
+                        <div class="remover">
                             <p name="remover">Em caso de reforma é necessário a remoção das aberturas antigas?</p>
-                            <label>Sim</label>
-                            <input type="radio" name="remover">
-                            <label>Não</label>
-                            <input type="radio" name="remover">
+                            <div class="opcoesRemover">
+                                <div class="radios">
+                                    <input type="radio" name="remocao" checked value="Sim">
+                                    <label>Sim</label>
+                                </div>
+                                <div class="radios">
+                                    <input type="radio" name="remocao" value="Não">
+                                    <label>Não</label>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <hr>
-                    <section class="mensagem">
-                        <div>                    
+                    <section class="areaMensagem">
+                        <div class="mensagem">                    
                             <h1>Digite sua mensagem abaixo:</h1>
-                            <p>Descreva com o maximo de detalhes o tipo de serviço que você precisa, no caso de obra nova, qual o tipo, quantidade de aberturas e se existe algum modelo que você já conheça e que queira mais informações. No caso de reforma, descreva o padrão que você já tem em outras aberturas para que possamos lhe oferecer a abertura que mais se adequa a sua necessidade. O mesmo serve para ampliação, descreva detalhes sobre as suas aberturas ja existentes e a quantidade de aberturas que serão necessárias.</p>
-                            <textarea name="mensagem" id="" cols="100" rows="20" class="textarea"></textarea>
+                            <p class="orientacao">Descreva, com o máximo de detalhes, o serviço solicitado.
+                               Em caso de obra nova, informe o tipo de obra, a quantidade de aberturas e, se houver, algum modelo de referência.
+                               Em situações de reforma ou ampliação, descreva o padrão das aberturas existentes e a quantidade necessária.</p>
+                            <textarea name="mensagem" cols="70" rows="15" class="textarea"></textarea>
                         </div>
                         <div>
-                            <button type="submit">Enviar</button>
+                            <button type="submit" class="btnEnviar">Enviar</button>
                         </div>
                     </section>
                 </form>
             </fieldset>
-            <script src="{{ asset('js/mascaras.js') }}"></script>
+            <script src="{{ asset('js/mascaraDocumento.js') }}"></script>
+            <script src="{{ asset('js/mascaraTelefone.js') }}"></script>
+            <script src="{{ asset('js/mascaraCep.js') }}"></script>
             <script src="{{ asset('js/buscaCep.js') }}"></script>
         </main>
         <footer class="rodape">
