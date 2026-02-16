@@ -1,41 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ClientController;
-use App\Http\Controllers\FormController;
 use App\Http\Controllers\SolicitacaoController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/* Páginas estáticas */
 
-Route::get("/home", function () {
-    return view ("home");
-}) ->name("home");
+Route::view('/', 'home')->name("home");
+Route::view('/about', 'about')->name("about");
+Route::view('/servicos','servicos')->name("servicos");
+Route::view('/contact','contact')->name("contact");
+Route::view('/mensagem', 'mensagem')->name('mensagem');
+/* Salvar solicitação */
 
-Route::get("/about", function () {
-    return view ("about");
-}) ->name("about");
+Route::post('/solicitacao', [SolicitacaoController::class, 'store'])->name('solicitacao.store');
 
-Route::get("/servicos", function () {
-    return view ("servicos");
-}) ->name("servicos");
-
-Route::get("/contact", function () {
-    return view("contact");
-}) ->name("contact");
-
-Route::get("/mensagem", [App\Http\Controllers\ClientController::class, 'show'])->name("mensagem");
-
-Route::post('/mensagem', [App\Http\Controllers\ClientController::class, 'enviar'])->name('mensagem');
-
-Route::post('/salvar', [SolicitacaoController::class, 'store'])->name('salvar');
-
-Route::get('/mensagem', function () {
-    return view('mensagem');
-})->name('mensagem.enviada');
-
-
-// Route::get('/formulario', [FormController::class, 'mostrarFormulario']);
-
-// Route::post('/salvar-dados', [FormController::class, 'processarFormulario']);
+Route::view('/mensagem/enviada', 'mensagem_enviada')->name('mensagem.enviada');

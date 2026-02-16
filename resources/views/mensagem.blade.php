@@ -33,7 +33,7 @@
         <main class="main">
             <fieldset class="fieldset">
                 <legend class="legend"><h1>Cadastro:</h1></legend>
-                <form action="{{ route('salvar') }}"  method="POST" class="formulario">
+                <form action="{{ route('solicitacao.store') }}"  method="POST" class="formulario">
                     @csrf
                     <section class="dados_pessoais">
                         <div class="entradas">

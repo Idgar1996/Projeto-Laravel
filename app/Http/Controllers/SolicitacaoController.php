@@ -12,6 +12,26 @@ class SolicitacaoController extends Controller
 {
     public function store(Request $request)
     {
+        // Validação
+        $request->validate([
+            'nome' => 'required|string|max:255',
+            'sobrenome' => 'required|string|max:255',
+            'tipo_documento' => 'required|in:cpf,cnpj',
+            'documento' => 'required|string',
+            'telefone' => 'required|string',
+            'email' => 'required|string',
+            'estado' => 'required|string',
+            'cep' => 'required|string',
+            'cidade' => 'required|string',
+            'rua' => 'required|string',
+            'numero' => 'required|string',
+            'bairro' => 'required|string',
+            'cor' => 'required|string',
+            'tipo_obra' => 'required|in:Nova,Reforma,Ampliação',
+            'remocao' => 'required|in:Sim,Não',
+            'mensagem' => 'required|string',
+        ]);
+
         // limpa números
         $cpfcnpj = preg_replace('/\D/', '', $request->documento);
         $telefone = preg_replace('/\D/', '', $request->telefone);
@@ -22,7 +42,7 @@ class SolicitacaoController extends Controller
         $estado = ucwords($estado);
 
         // padroniza remoção
-        $remocao = $request->remocao == 'sim' ? 1 : 0;
+        $remocao = strtolower($request->remocao) == 'sim' ? 1 : 0;
 
         $solicitacao = Solicitacao::create([
             'nome' => ucwords(strtolower($request->nome)),
@@ -45,7 +65,7 @@ class SolicitacaoController extends Controller
 
         Mail::to('geanschneider1996@gmail.com')->send(new SolicitacaoMail($solicitacao));
 
-        return redirect()->route('mensagem.enviada');
+        return redirect()->route('home')->with('success', 'Solicitação enviada com sucesso! Em breve entraremos em contato!');
     }
 
 }

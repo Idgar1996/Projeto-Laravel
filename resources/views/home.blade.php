@@ -8,6 +8,17 @@
         <link href="{{ asset('css/home.css') }}" rel="stylesheet"/>
     </head>
     <body>
+    @if (session('success'))
+        <div id="alert-success" class="alert-success">
+            {{ session('success')}}
+        </div>
+    @endif
+
+    @if ($errors->any())
+        <div id="alert-error" class="alert-error">
+            Ocorreu um erro ao enviar o formulário. Verifique os campos!
+        </div>
+    @endif
         <header class="header">
             <a href="{{ route('home') }}">
                 <img src="{{ asset('imagens/logo/logo_alusim1.png')}}" alt="Logo Alusim" class="logo" title="Logo Alusim">
@@ -34,5 +45,6 @@
         <footer class="rodape">
             <h3>© 2025 copyright. Todos os direitos reservados.</h3>
         </footer>
+    <script src="{{ asset('js/alert.js') }}"></script>
     </body>
 </html>
