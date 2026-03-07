@@ -19,35 +19,54 @@
             Ocorreu um erro ao enviar o formulário. Verifique os campos!
         </div>
     @endif
-        <header class="header">
-            <a href="{{ route('home') }}" class="img-header">
-                <img src="{{ asset('imagens/diversas/logo_alusim1.png')}}" alt="Logo Alusim" class="logo" title="Logo Alusim">
+        <header class="container-header">
+            <a href="{{ route('home') }}" class="img-link-header">
+                <img src="{{ asset('imagens/diversas/logo_alusim1.png')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">
             </a>
-            <aside class="aside">
-                    <nav class="menu-nav">
+            <aside class="menu-aside">
+                    <nav class="menu-nav-in-aside">
                         <div class="menu-item">
-                            <a href="{{ route('home')}}" class="links">Home</a>
+                            <a href="{{ route('home')}}" class="links-in-aside">Home</a>
                         </div>
                         <div class='menu-item'>
-                            <a href="{{ route('servicos')}}" class="links">Fotos</a>
+                            <a href="{{ route('servicos')}}" class="links-in-aside">Fotos</a>
                         </div>
                         <div class="menu-item">
-                            <a href="{{ route('about')}}" class="links">Sobre nós</a>
+                            <a href="{{ route('about')}}" class="links-in-aside">Sobre nós</a>
                         </div>
                         <div class="menu-item">
-                            <a href="{{ route('contact')}}" class="links">Contato</a>
+                            <a href="{{ route('contact')}}" class="links-in-aside">Contato</a>
                         </div>
                         <a href="" class="link-orcamento-header">Enviar mensagem</a>
                     </nav>
             </aside>
         </header>
         <main class="main">
-            <div class="card">
-                <img src="{{ asset('imagens/diversas/modelo-home.jpg') }}" alt="Imagem demonstrativa da página home" class="img-card">
-                <div class="texto-card">
+            <div class="banner1">
+                <img src="{{ asset('imagens/diversas/modelo-home.jpg') }}" alt="Imagem demonstrativa da página home" class="img-banner">
+                <div class="texto-banner">
                     <h1>Esquadrias de alumínio sob medida</h1>
                     <p>Qualidade, durabilidade e acabamento profissional.</p>
-                    <a href="" class="link-orcamento-card">Solicitar orçamento</a>
+                    <a href="" class="link-orcamento-banner">Solicitar orçamento</a>
+                </div>
+            </div>
+            <div class="banner2">
+                <div class="container-skill">
+                    <img src="{{ asset('imagens/icones/precisao-ajustado.png')}}" alt="">
+                    <h2>Sob medida</h2>
+                    <p>Fabricação própria e sob medida</p>
+                </div>
+                <div class="container-skill">
+                    <img src="{{ asset('imagens/icones/profissionais-ajustado.png')}}" alt="">
+                    <h2>Instalação profissional</h2>
+                </div>
+                <div class="container-skill">
+                    <img src="{{ asset('imagens/icones/acabamento-ajustado.png')}}" alt="">
+                    <h2>Acabamento premium</h2>
+                </div>
+                <div class="container-skill">
+                    <img src="{{asset('imagens/icones/experiancia-ajustado.png')}}" alt="">
+                    <h2>Anos de experiência</h2>
                 </div>
             </div>
         </main>

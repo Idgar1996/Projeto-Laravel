@@ -39,7 +39,7 @@
                         <div class="entradas">
                             <div class="campos">
                                 <label for="nome">Nome:</label>
-                                <input type="text" name="nome" id="nome" required title="Digite seu primeiro nome" placeholder="Ex: João">
+                                <input type="text" name="nome" id="nome" required title="Digite seu primeiro nome"  placeholder="Ex: João">
                             </div>
                             <div class="campos">
                                 <label for="sobrenome">Sobrenome:</label>
