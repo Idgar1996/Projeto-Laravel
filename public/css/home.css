@@ -1,11 +1,12 @@
-/* Parâmetros iniciais para facilitar a construção */
+/* Parâmetros e variáveis iniciais que facilitam a construção do site */
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Parametros iniciais para "zerar" certas medidas automáticas */
 
 :root {
     font-size: 16px;
 }
-
 * {
     padding: 0;
     margin: 0;
@@ -13,36 +14,43 @@
     box-sizing: border-box;
 }
 
+/* Parametrização do body: */
+/* Principais definições que ditarão a forma e o estilo do corpo visível do site */
+
 body {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
 }
-.img-header {
-    width: 50%;
-}
 
-.header {
+/* Parametrização do header, bem como de seus elementos */
+/* Ajustes do containber principal que abranje tanto o logo (link) como o menu lateral de navegação */
+/* Ajuste e configuração do logo que serve como link de retorno para a página "Home" */
+/* Menu lateral com os principais links de navegação entre as páginas do site */
+
+.container-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 60px 0 60px;
     width: 100%;
     height: 110px;
+    background-color: #f3f1f4;
 }
-.logo {
+.img-link-header {
+    width: 50%;
+}
+.logo-in-header {
     height: 110px;
 }
-
-.aside {
+.menu-aside {
     display: flex;
     align-items: center;
     width: 50%;
     height: 100%;
 }
-
-.menu-nav {
+.menu-nav-in-aside {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,14 +60,13 @@ body {
     font-weight: bold;
     font-size: 28px;
 }
-.links {
+.links-in-aside {
     color: #333;
     text-decoration: none;
 }
-.links:hover{
+.links-in-aside:hover{
     color: #d32f2f;
 }
-
 .link-orcamento-header {
     width: 110px;
     height: 35px;
@@ -79,22 +86,30 @@ body {
     border-radius: 8px;
 }
 
+/* Parametrização do main */
+
 .main {
     display: flex;
     flex-direction: column;
-
+    max-width: 100%;
 }
-.card{
+
+/* Parametrização do banner inicial com os seguintes elementos: */
+/* Imagem de fundo */
+/* Titulo introdutório */
+/* Botão de redirecionamento para o orçamento */
+
+.banner1{
     position: relative;
     display: inline-block;
 }
-.img-card {
+.img-banner {
     object-fit: cover;
     width: 100%;
     height: 500px;
     display: block;
 }
-.texto-card {
+.texto-banner {
     position: absolute;
     top: 40%;
     left: 40%;
@@ -102,14 +117,13 @@ body {
     color: white;
     font-weight: bold;
 }
-.texto-card h1 {
+.texto-banner h1 {
     font-size: 70px;
 }
-.texto-card p {
+.texto-banner p {
     font-size: 30px;
 }
-
-.link-orcamento-card {
+.link-orcamento-banner {
     position: absolute;
     width: 200px;
     height: 50px;
@@ -124,7 +138,60 @@ body {
     justify-content: center;
     border-radius: 8px;
 }
-.link-orcamento-card:hover {
+.link-orcamento-banner:hover {
     background-color: #d32f2f;
     border-radius: 8px;
 }
+
+/* Parametrização do banner 2 com as principais características da empresa: */
+/* Precisão */
+/* Profissionais capacitados */
+/* Acabamento premium */
+/* Anos de experiência */
+
+.banner2 {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fdfbfc;
+    padding: 0 20px 40px 20px;
+}
+.container-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    text-align: center;
+    position: relative;
+}
+.container-skill:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    transform: translate(-50%);
+    height: 250px;
+    width: 2px;
+    background-color: #e0e0e0;
+}
+.container-skill img{
+    width: 180px;
+}
+.container-skill h2{
+    font-size: 40px;
+}
+.container-skill p {
+    font-size: 22px;
+    text-align: center;
+    width: 60%;
+}
+/* Parametrização do container de pré-visualização */
+/* Preview dos serviços oferecidos */
+/* Amostra prévias dos principais tipo de aberturas produzidas */
+/* Janelas */
+/* Portas */
+/* Cercas */
+/* Portões */
+/* Guarda corpo */
+/* Pergolado */
