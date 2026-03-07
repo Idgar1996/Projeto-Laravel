@@ -18,115 +18,113 @@ body {
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
-    justify-content: space-between;
-    background-image: linear-gradient(to bottom,
-                                        #adacac80 0%, 
-                                        #adacac80 20%, 
-                                        #7c797980 45%, 
-                                        #7c797980 55%, 
-                                        #adacac80 80%,  
-                                        #adacac80 100%);
-    border: 2px solid crimson;
+}
+.img-header {
+    width: 50%;
 }
 
 .header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: start;
+    padding: 0 60px 0 60px;
     width: 100%;
-    min-height: 300px;
-    padding: 20px;
+    height: 110px;
 }
-
 .logo {
-    height: 90%;
-    margin-left: 100px;
-    transition: box-shadow 0.4s ease;
-    border-radius: 10px;
-}
-.logo:hover {
-    box-shadow: 4px 4px 6px #7c797980;
-    border-radius: 10px;
+    height: 110px;
 }
 
 .aside {
-    height: 100%;
-    width: 180px;
     display: flex;
-    justify-content: center;
-    position: relative;
-    margin-right: 150px;
+    align-items: center;
+    width: 50%;
+    height: 100%;
 }
 
 .menu-nav {
-    width: 180px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.menu-item {
-    height: 50px;
-    width: auto;
-    align-items: start;
-    color: #333333;
-    font-size: 18px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
     font-weight: bold;
-    padding: 5px 5px 5px 5px;
+    font-size: 28px;
 }
 .links {
-    color: #333333;
-    font-size: 28px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    display:block;
-    padding: 12px 15px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    color: #333;
     text-decoration: none;
-    border-radius: 10px;
 }
-.links:hover {
-    transform: scale(1.2);
-    color: crimson;
-    text-shadow: 1px 1px 2px #333333;
-    box-shadow: 2px 2px 4px #7c797980;
-    border-radius: 10px;
+.links:hover{
+    color: #d32f2f;
 }
 
-.rodape {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    width: auto;
-    height: 30px;
-}
-.alert-success,
-.alert-error {
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 30px;
-    border-radius: 8px;
+.link-orcamento-header {
+    width: 110px;
+    height: 35px;
+    background-color: #c60202;
+    font-size: 12px;
     font-weight: bold;
-    z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-
-    opacity: 1;
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.alert-success {
-    background-color: #2ecc71;
+    text-decoration: none;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.link-orcamento-header:hover {
+    background-color: #d32f2f;
+    border-radius: 8px;
 }
 
-.alert-error {
-    background-color: #e74c3c;
+.main {
+    display: flex;
+    flex-direction: column;
+
+}
+.card{
+    position: relative;
+    display: inline-block;
+}
+.img-card {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+.texto-card {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
     color: white;
+    font-weight: bold;
+}
+.texto-card h1 {
+    font-size: 70px;
+}
+.texto-card p {
+    font-size: 30px;
 }
 
-/* classe para desaparecer */
-.fade-out {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-20px);
+.link-orcamento-card {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: #c60202;
+    font-size: 18px;
+    font-weight: bold;
+    top: 105%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.link-orcamento-card:hover {
+    background-color: #d32f2f;
+    border-radius: 8px;
 }
