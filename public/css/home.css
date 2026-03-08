@@ -5,7 +5,26 @@
 /* Parametros iniciais para "zerar" certas medidas automáticas */
 
 :root {
-    font-size: 16px;
+    /* Font-size padrão */
+    --fonte-titulo: 4.375rem;
+    --fonte-titulo2: 2.5rem;
+    --fonte-subtitulo: 2rem;
+    --fonte-subtitulo2: 1.25rem;
+    --fonte-subtitulo3: 1.625rem;
+    --font-texto: 1rem;
+
+    /* Cores padrão */
+    --cor-fundo: #f3f1f4;
+    --cor-fonte: #333;
+    --cor-botao: #c60202;
+    --cor-hover: #d32f2f;
+    --cor-fundo-banner: #fdfbfc;
+    --cor-divisoria: #e0e0e0;
+    --cor-testes: #27e327;
+
+    /* Bordas padrão */
+    --raio-borda-botoes: 0.5rem;
+    --raio-borda-imagens: 0.25rem;
 }
 * {
     padding: 0;
@@ -33,16 +52,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px 0 60px;
+    padding: 0 3.75rem 0 3.75rem;
     width: 100%;
-    height: 110px;
-    background-color: #f3f1f4;
+    height: 6.785rem;
+    background-color: var(--cor-fundo);
 }
 .img-link-header {
     width: 50%;
 }
 .logo-in-header {
-    height: 110px;
+    height: 6.785rem;
 }
 .menu-aside {
     display: flex;
@@ -58,32 +77,33 @@ body {
     height: 100%;
     text-decoration: none;
     font-weight: bold;
-    font-size: 28px;
+    font-size: var(--fonte-subtitulo);
 }
 .links-in-aside {
-    color: #333;
+    color: var(--cor-fonte);
     text-decoration: none;
+    font-size: var(--fonte-subtitulo);
 }
 .links-in-aside:hover{
-    color: #d32f2f;
+    color: var(--cor-fonte-hover);
 }
 .link-orcamento-header {
-    width: 110px;
-    height: 35px;
-    background-color: #c60202;
-    font-size: 12px;
+    width: 9.375rem;
+    height: 3.125rem;
+    background-color: var(--cor-botao);
+    font-size: var(--font-texto);
     font-weight: bold;
     text-decoration: none;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: var(--raio-borda-botoes);
     transition: all 0.2s ease;
 }
 .link-orcamento-header:hover {
-    background-color: #d32f2f;
-    border-radius: 8px;
+    background-color: var(--cor-fonte-hover);
+    border-radius: var(--raio-borda-botoes);
 }
 
 /* Parametrização do main */
@@ -106,7 +126,7 @@ body {
 .img-banner {
     object-fit: cover;
     width: 100%;
-    height: 500px;
+    height: 31.25rem;
     display: block;
 }
 .texto-banner {
@@ -116,31 +136,34 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+.texto-banner *:last-child{
+    margin-top: 0.625rem;
 }
 .texto-banner h1 {
-    font-size: 70px;
+    font-size: var(--fonte-titulo);
 }
 .texto-banner p {
-    font-size: 30px;
+    font-size: var(--fonte-subtitulo);
 }
 .link-orcamento-banner {
-    position: absolute;
-    width: 200px;
-    height: 50px;
-    background-color: #c60202;
-    font-size: 18px;
+    width: 12.5rem;
+    height: 3.125rem;
+    background-color: var(--cor-botao);
+    font-size: var(--font-texto);
     font-weight: bold;
-    top: 105%;
     text-decoration: none;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: var(--raio-borda-botoes);
 }
 .link-orcamento-banner:hover {
-    background-color: #d32f2f;
-    border-radius: 8px;
+    background-color: var(--cor-hover);
+    border-radius: var(--raio-borda-botoes);
 }
 
 /* Parametrização do banner 2 com as principais características da empresa: */
@@ -154,8 +177,8 @@ body {
     max-width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: #fdfbfc;
-    padding: 0 20px 40px 20px;
+    background-color: var(--cor-fundo-banner);
+    padding: 0 1.25rem 2.5rem 1.25rem;
 }
 .container-skill {
     display: flex;
@@ -168,21 +191,20 @@ body {
 .container-skill:not(:last-child)::after {
     content: "";
     position: absolute;
-    right: 0;
+    right: -12%;
     top: 20%;
-    transform: translate(-50%);
-    height: 250px;
-    width: 2px;
-    background-color: #e0e0e0;
+    height: 16.625rem;
+    width: 0.125rem;
+    background-color: var(--cor-divisoria);
 }
 .container-skill img{
-    width: 180px;
+    width: 11.25rem;
 }
 .container-skill h2{
-    font-size: 40px;
+    font-size: var(--fonte-titulo2);
 }
 .container-skill p {
-    font-size: 22px;
+    font-size: var(--fonte-subtitulo2);
     text-align: center;
     width: 60%;
 }
@@ -195,3 +217,79 @@ body {
 /* Portões */
 /* Guarda corpo */
 /* Pergolado */
+
+.banner3 {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 1.875rem;
+    background-color: var(--cor-fundo);
+    align-items: center;
+    gap: 1.875rem;
+}
+.banner3 h1 {
+    font-size: var(--fonte-titulo);
+    font-weight: bold;
+}
+.container-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    row-gap: 2.5rem;
+    column-gap: 2.5rem;
+    justify-items: center;
+    align-items: center;
+}
+.card-servico {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-fundo-banner);
+    display: flex;
+    flex-direction: column;
+    padding: 0.625rem;
+    align-items: start;
+    gap: 0.3125rem;
+    text-align: justify;
+}
+.card-servico img {
+    width: 100%;
+    border-radius: var(--raio-borda-imagens);
+}
+.card-servico h2, .card-servico p {
+    text-indent: 1.25rem;
+}
+
+/* Parametrização do footer */
+/* Inserção do logo */
+/* Slogan */
+/* Infos de endereço */
+
+.footer {
+    display: flex;
+    background-color: var(--cor-fonte);
+    color: var(--cor-fundo);
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
+    align-items: center;
+}
+.footer img {
+    margin-left: 2.5rem;
+    height: 5rem;
+}
+.footer h2 {
+    font-size: var(--fonte-subtitulo3);
+}
+.footer h3 {
+    font-size: var(--fonte-subtitulo2);
+}
+.footer p {
+    font-size: var(--font-texto)
+}
+.painel-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
