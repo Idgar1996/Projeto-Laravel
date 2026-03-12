@@ -8,31 +8,99 @@
         <link href="{{ asset('css/servicos.css') }}" rel="stylesheet"/>
     </head>
     <body class="body">
-        <header class="header">
-            <a href="{{ route('home') }}">
-                <img src="{{ asset('imagens/logo/logo_alusim1.png') }}" alt="Logo Alusim" class="logo" title="Logo Alusim">
+        <header class="container-header">
+            <a href="{{ route('home') }}" class="img-link-header">
+                <img src="{{ asset('imagens/diversas/logo_alusim1.png')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">
             </a>
-            <aside class="aside">
-                    <nav class="menu-nav">
+            <aside class="menu-aside">
+                    <nav class="menu-nav-in-aside">
                         <div class="menu-item">
-                            <a href="{{ route('home') }}" class="links">Home</a>
+                            <a href="{{ route('home')}}" class="links-in-aside">Home</a>
                         </div>
                         <div class='menu-item'>
-                            <a href="{{ route('servicos') }}" class="links">Fotos</a>
+                            <a href="{{ route('servicos')}}" class="links-in-aside">Fotos</a>
                         </div>
                         <div class="menu-item">
-                            <a href="{{ route('about') }}" class="links">Sobre nós</a>
+                            <a href="{{ route('about')}}" class="links-in-aside">Sobre nós</a>
                         </div>
                         <div class="menu-item">
-                            <a href="{{ route('contact') }}" class="links">Contato</a>
+                            <a href="{{ route('contact')}}" class="links-in-aside">Contato</a>
                         </div>
+                        <a href="" class="link-orcamento">Enviar mensagem</a>
                     </nav>
             </aside>
         </header>
-        <main class="corpo">
+        <main class="main">
+            <section class="container-servicos">
+                <h1>Nossos Serviços</h1>
+                <h2>Alguns trabalhos realizados pela Alusim.</h2>
+                <div class="container-imagens">
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Janela de correr</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Porta janela</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Porta de giro</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Porta pivotante</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Janela maxim-ar</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Persiana</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Sanfonada</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Portão</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Guarda corpo</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Fachada</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Pergolado</h3>
+                    </div>
+                    <div class="card-servico">
+                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <h3>Corrimão</h3>
+                    </div>
+                </div>
+                <div class="card-go-message">
+                    <div class="container-texto">
+                        <h3>Precisando de esquadrias para a sua obra?</h3>
+                        <p>Entre em contato e solicite um orçamento sem compromisso.</p>
+                    </div>
+                    <a href="{{ route('mensagem') }}" class="link-bottom">Solicitar orçamento</a>
+                </div>
+            </section>
         </main>
-        <footer class="rodape">
-            <h3>© 2025 copyright. Todos os direitos reservados.</h3>
+        <footer class="footer">
+            <img src="{{ asset('/imagens/diversas/logo_branco.png') }}" alt="Logo branco Alusim">
+            <h2>Esquadrias de alumínio sob medida com qualidade e precisão.</h2>
+            <div class="painel-infos">
+                <h3>Alusim Esquadrias LTDA</h3>
+                <p>(51) 99594-4991</p>
+                <p>Rua Irmão Weibert, 144, Centro - Bom Princípio</p>
+            </div>
         </footer>
     </body>
 </html>

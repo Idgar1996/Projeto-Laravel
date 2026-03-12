@@ -37,7 +37,7 @@
                         <div class="menu-item">
                             <a href="{{ route('contact')}}" class="links-in-aside">Contato</a>
                         </div>
-                        <a href="" class="link-orcamento-header">Enviar mensagem</a>
+                        <a href="" class="link-orcamento">Enviar mensagem</a>
                     </nav>
             </aside>
         </header>
@@ -47,7 +47,7 @@
                 <div class="texto-banner">
                     <h1>Esquadrias de alumínio sob medida</h1>
                     <p>Qualidade, durabilidade e acabamento profissional.</p>
-                    <a href="" class="link-orcamento-banner">Solicitar orçamento</a>
+                    <a href="" class="link-orcamento">Solicitar orçamento</a>
                 </div>
             </section>
             <section class="banner2">
@@ -103,6 +103,7 @@
                         <p>Além de segurança, os guarda corpos possuem relevância quando se fala em estética residencial.</p>
                     </div>
                 </div>
+                <a href="{{ route('mensagem') }}" class="link-orcamento">Enviar mensagem</a>
             </section>
         </main>
         <footer class="footer">

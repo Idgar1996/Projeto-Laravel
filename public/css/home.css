@@ -1,5 +1,4 @@
 /* Parâmetros e variáveis iniciais que facilitam a construção do site */
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* Parametros iniciais para "zerar" certas medidas automáticas */
@@ -85,10 +84,10 @@ body {
     font-size: var(--fonte-subtitulo);
 }
 .links-in-aside:hover{
-    color: var(--cor-fonte-hover);
+    color: var(--cor-hover);
 }
-.link-orcamento-header {
-    width: 9.375rem;
+.link-orcamento {
+    width: 10rem;
     height: 3.125rem;
     background-color: var(--cor-botao);
     font-size: var(--font-texto);
@@ -101,8 +100,8 @@ body {
     border-radius: var(--raio-borda-botoes);
     transition: all 0.2s ease;
 }
-.link-orcamento-header:hover {
-    background-color: var(--cor-fonte-hover);
+.link-orcamento:hover {
+    background-color: var(--cor-hover);
     border-radius: var(--raio-borda-botoes);
 }
 
@@ -147,23 +146,6 @@ body {
 }
 .texto-banner p {
     font-size: var(--fonte-subtitulo);
-}
-.link-orcamento-banner {
-    width: 12.5rem;
-    height: 3.125rem;
-    background-color: var(--cor-botao);
-    font-size: var(--font-texto);
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--raio-borda-botoes);
-}
-.link-orcamento-banner:hover {
-    background-color: var(--cor-hover);
-    border-radius: var(--raio-borda-botoes);
 }
 
 /* Parametrização do banner 2 com as principais características da empresa: */
@@ -238,12 +220,11 @@ body {
     width: 100%;
     height: 100%;
     row-gap: 2.5rem;
-    column-gap: 2.5rem;
     justify-items: center;
     align-items: center;
 }
 .card-servico {
-    width: 100%;
+    width: 80%;
     height: 100%;
     background-color: var(--cor-fundo-banner);
     display: flex;
