@@ -1,101 +1,165 @@
-/* Parâmetros iniciais para facilitar a construção */
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Parâmetros e variáveis iniciais que facilitam a construção do site */
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root {
-    font-size: 16px;
-}
+/* Parametros iniciais para "zerar" certas medidas automáticas */
 
+:root {
+    /* Font-size padrão */
+    --fonte-titulo: 3.125rem;
+    --fonte-titulo2: 2.074rem;
+    --fonte-subtitulo: 1.728rem;
+    --fonte-subtitulo2: 1.44rem;
+    --fonte-subtitulo3: 1.2rem;
+    --font-texto: 1rem;
+
+    /* Cores padrão */
+    --cor-fundo: #f3f1f4;
+    --cor-fonte: #333;
+    --cor-botao: #c60202;
+    --cor-hover: #d32f2f;
+    --cor-fundo-banner: #fdfbfc;
+    --cor-divisoria: #e0e0e0;
+    --cor-testes: #27e327;
+
+    /* Bordas padrão */
+    --raio-borda-botoes: 0.5rem;
+    --raio-borda-imagens: 0.25rem;
+}
 * {
     padding: 0;
     margin: 0;
-    font-family: "Cabin", sans-serif;
+    font-family: Arial,"Cabin", sans-serif;
     box-sizing: border-box;
 }
+
+/* Parametrização do body: */
+/* Principais definições que ditarão a forma e o estilo do corpo visível do site */
 
 body {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    min-height: 100vh;
-    justify-content: space-between;
-    background-image: linear-gradient(to bottom,
-                                        #adacac80 0%, 
-                                        #adacac80 20%, 
-                                        #7c797980 45%, 
-                                        #7c797980 55%, 
-                                        #adacac80 80%,  
-                                        #adacac80 100%);
-    border: 2px solid crimson;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
     width: 100%;
-    min-height: 300px;
-    padding: 20px;
+    min-height: 100vh;
 }
 
-.logo {
-    height: 90%;
-    margin-left: 100px;
-    transition: box-shadow 0.4s ease;
-    border-radius: 10px;
-}
-.logo:hover {
-    box-shadow: 4px 4px 6px #7c797980;
-    border-radius: 10px;
-}
+/* Parametrização do header, bem como de seus elementos */
+/* Ajustes do containber principal que abranje tanto o logo (link) como o menu lateral de navegação */
+/* Ajuste e configuração do logo que serve como link de retorno para a página "Home" */
+/* Menu lateral com os principais links de navegação entre as páginas do site */
 
-.aside {
-    height: 100%;
-    width: 180px;
+.container-header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.75rem 0 3.75rem;
+    width: 100%;
+    height: 6.785rem;
+    background-color: var(--cor-fundo);
+}
+.img-link-header {
+    width: 50%;
+}
+.logo-in-header {
+    height: 6.785rem;
+}
+.menu-aside {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.menu-nav-in-aside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--fonte-subtitulo);
+}
+.links-in-aside {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: var(--fonte-subtitulo);
+}
+.links-in-aside:hover{
+    color: var(--cor-hover);
+}
+.link-orcamento {
+    width: 10rem;
+    height: 3.125rem;
+    background-color: var(--cor-botao);
+    font-size: var(--font-texto);
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    position: relative;
-    margin-right: 150px;
+    border-radius: var(--raio-borda-botoes);
+    transition: all 0.2s ease;
+}
+.link-orcamento:hover {
+    background-color: var(--cor-hover);
+    border-radius: var(--raio-borda-botoes);
 }
 
-.menu-nav {
-    width: 180px;
+/* Parametrização do main */
+
+.main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-.menu-item {
-    height: 50px;
-    width: auto;
-    align-items: start;
-    color: #333333;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 5px 5px 5px 5px;
-}
-.links {
-    color: #333333;
-    font-size: 28px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    display:block;
-    padding: 12px 15px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    text-decoration: none;
-    border-radius: 10px;
-}
-.links:hover {
-    transform: scale(1.2);
-    color: crimson;
-    text-shadow: 1px 1px 2px #333333;
-    box-shadow: 2px 2px 4px #7c797980;
-    border-radius: 10px;
+    max-width: 100%;
+    padding: 1.125rem;
 }
 
-.rodape {
+/* Parametrização da sessão sobre nós */
+/* Imagens demonstrativas */
+/* Textos descritivos contando um pouco da nossa história */
+
+.container-about {
+    background-color: var(--cor-fundo);
     display: flex;
-    justify-content: center;
-    align-items: start;
-    width: auto;
-    height: 30px;
+    padding: 2.125rem;
+}
+.container-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.container-about img{
+    width: 50%;
+}
+/* Parametrização do footer */
+/* Inserção do logo */
+/* Slogan */
+/* Infos de endereço */
+
+.footer {
+    display: flex;
+    background-color: var(--cor-fonte);
+    color: var(--cor-fundo);
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
+    align-items: center;
+}
+.footer img {
+    margin-left: 2.5rem;
+    height: 5rem;
+}
+.footer h2 {
+    font-size: var(--fonte-subtitulo2);
+}
+.footer h3 {
+    font-size: var(--fonte-subtitulo3);
+}
+.footer p {
+    font-size: var(--font-texto)
+}
+.painel-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

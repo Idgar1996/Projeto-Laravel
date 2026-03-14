@@ -1,298 +1,149 @@
-/* Parâmetros iniciais para facilitar a construção */
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Parâmetros e variáveis iniciais que facilitam a construção do site */
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root {
-    font-size: 16px;
-}
+/* Parametros iniciais para "zerar" certas medidas automáticas */
 
+:root {
+    /* Font-size padrão */
+    --fonte-titulo: 3.125rem;
+    --fonte-titulo2: 2.074rem;
+    --fonte-subtitulo: 1.728rem;
+    --fonte-subtitulo2: 1.44rem;
+    --fonte-subtitulo3: 1.2rem;
+    --font-texto: 1rem;
+
+    /* Cores padrão */
+    --cor-fundo: #f3f1f4;
+    --cor-fonte: #333;
+    --cor-botao: #c60202;
+    --cor-hover: #d32f2f;
+    --cor-fundo-banner: #fdfbfc;
+    --cor-divisoria: #e0e0e0;
+    --cor-testes: #27e327;
+
+    /* Bordas padrão */
+    --raio-borda-botoes: 0.5rem;
+    --raio-borda-imagens: 0.25rem;
+}
 * {
     padding: 0;
     margin: 0;
-    font-family: "Cabin", sans-serif;
+    font-family: Arial,"Cabin", sans-serif;
     box-sizing: border-box;
 }
+
+/* Parametrização do body: */
+/* Principais definições que ditarão a forma e o estilo do corpo visível do site */
 
 body {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    justify-content: space-between;
-    background-image: linear-gradient(to bottom,
-                                        #adacac80 0%, 
-                                        #adacac80 20%, 
-                                        #7c797980 45%, 
-                                        #7c797980 55%, 
-                                        #adacac80 80%,  
-                                        #adacac80 100%);
-    border: 2px solid crimson;
 }
 
-.header {
+/* Parametrização do header, bem como de seus elementos */
+/* Ajustes do containber principal que abranje tanto o logo (link) como o menu lateral de navegação */
+/* Ajuste e configuração do logo que serve como link de retorno para a página "Home" */
+/* Menu lateral com os principais links de navegação entre as páginas do site */
+
+.container-header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: start;
+    padding: 0 3.75rem 0 3.75rem;
     width: 100%;
-    min-height: 300px;
-    padding: 20px;
+    height: 6.785rem;
+    background-color: var(--cor-fundo);
 }
-
-.logo {
-    height: 90%;
-    margin-left: 100px;
-    transition: box-shadow 0.4s ease;
-    border-radius: 10px;
+.img-link-header {
+    width: 50%;
 }
-.logo:hover {
-    box-shadow: 4px 4px 6px #7c797980;
-    border-radius: 10px;
+.logo-in-header {
+    height: 6.785rem;
 }
-
-.aside {
+.menu-aside {
+    display: flex;
+    align-items: center;
+    width: 50%;
     height: 100%;
-    width: 180px;
+}
+.menu-nav-in-aside {
     display: flex;
-    justify-content: center;
-    position: relative;
-    margin-right: 150px;
-}
-
-.menu-nav {
-    width: 180px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.menu-item {
-    height: 50px;
-    width: auto;
-    align-items: start;
-    color: #333333;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 5px 5px 5px 5px;
-}
-.links {
-    color: #333333;
-    font-size: 28px;
-    font-weight: bold;
-    display:block;
-    padding: 12px 15px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
-    border-radius: 10px;
+    font-weight: bold;
+    font-size: var(--fonte-subtitulo);
 }
-.links:hover {
-    transform: scale(1.2);
-    color: crimson;
-    text-shadow: 1px 1px 2px #333333;
-    box-shadow: 2px 2px 4px #7c797980;
-    border-radius: 10px;
+.links-in-aside {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: var(--fonte-subtitulo);
 }
-
-.rodape {
+.links-in-aside:hover{
+    color: var(--cor-hover);
+}
+.link-orcamento {
+    width: 10rem;
+    height: 3.125rem;
+    background-color: var(--cor-botao);
+    font-size: var(--font-texto);
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: start;
-    width: auto;
-    height: 30px;
+    border-radius: var(--raio-borda-botoes);
+    transition: all 0.2s ease;
+}
+.link-orcamento:hover {
+    background-color: var(--cor-hover);
+    border-radius: var(--raio-borda-botoes);
 }
 
-/* Aba mensagem, local para estilizar os campos de inserção de dados e envio da mensagem */
+/* Parametrização do main */
 
 .main {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
-    padding: 20px;
 }
-.fieldset {
+
+
+
+/* Parametrização do footer */
+/* Inserção do logo */
+/* Slogan */
+/* Infos de endereço */
+
+.footer {
+    display: flex;
+    background-color: var(--cor-fonte);
+    color: var(--cor-fundo);
     width: 100%;
-    padding: 10px;
-    border: 2px #333333 solid;
-    border-radius: 12px;
-}
-.legend {
-    margin-left: 50px;
-    padding: 10px;
-    color:#333333;
-}
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.dados_pessoais {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-}
-.entradas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 0 20px 0 20px;
-}
-.campos {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    align-items: center;
-    gap: 3px;
-}
-.campos label {
-    white-space: nowrap;
-}
-.campos input {
-    height: 30px;
-    padding: 0 0 0 10px;
-    border-radius: 5px;
-    border: #333333 1.5px solid;
-}
-.campos input:hover,
-.campos input:focus,
-.campos input:focus-visible {
-    transform: scale(1.05);
-    box-shadow: 2px 2px 4px #7c797980;
-    border-radius: 5px;
-}
-.campos select {
-    width: 100px;
-    height: 25px;
-    text-align: center;
-    background-color: white;
-    border: 1.5px #333333 solid;
-    border-radius: 5px;
-}
-.documentos{
-    display: flex;
-    gap: 20px;
-}
-
-/* Customização entradas: */
-#numero, #cep {
-    width: 100px;
-}
-
-#nome, #telefone, #bairro {
-    width: 250px;
-}
-
-#cidade {
-    border: transparent 0 solid;
-}
-
-.reset {
-    background-color: transparent;
-    color: #333333;
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    padding: 12px 10px;
-    width: 200px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    border-radius: 10px;
-    border-color: #333333;
-    border-width: 0 0 0 0;
-    box-shadow: 1px 1px 2px #7c797980;
-}
-.reset:hover{
-    transform: scale(1.1);
-    color: crimson;
-    text-shadow: 1px 1px 1px #333333;
-    box-shadow: 2px 2px 2px crimson;
-    border-radius: 10px;
-}
-
-.obra {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 30px;
-    padding: 0 0 0 25px;
-}
-
-.color {
-    display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
     align-items: center;
 }
-.corEscolhida{
-    width: 200px;
-    height: 30px;
-    text-align: center;
-    border-color: #333333;
-    border-style: solid;
-    border-width: 1.5px;
-    border-radius: 5px;
-    background-color: white;
+.footer img {
+    margin-left: 2.5rem;
+    height: 5rem;
 }
-
-.tipoObra{
+.footer h2 {
+    font-size: var(--fonte-subtitulo2);
+}
+.footer h3 {
+    font-size: var(--fonte-subtitulo3);
+}
+.footer p {
+    font-size: var(--font-texto)
+}
+.painel-infos {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-}
-.opcoesObra {
-    display: flex;
-    gap: 20px;
-}
-
-.remover {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.opcoesRemover {
-    display: flex;
-    gap: 20px;
-}
-
-.radios{
-    display: flex;
-    gap: 5px;
-}
-
-.areaMensagem {
-    padding: 0 25px 0 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.mensagem {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.orientacao {
-    text-indent: 20px;
-    text-align: justify;
-}
-
-textarea {
-    border: #333333 1.5px solid;
-    border-radius: 8px;
-    padding: 10px 10px 10px 10px;
-}
-
-.btnEnviar {
-    background-color: transparent;
-    color: #333333;
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    padding: 12px 10px;
-    width: 200px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    border-radius: 10px;
-    border-color: #333333;
-    border-width: 0 0 0 0;
-    box-shadow: 1px 1px 2px #7c797980;
-}
-.btnEnviar:hover{
-    transform: scale(1.1);
-    color: green;
-    text-shadow: 1px 1px 1px #333333;
-    box-shadow: 2px 2px 2px green;
-    border-radius: 10px;
+    align-items: center;
 }

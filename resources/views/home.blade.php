@@ -37,7 +37,7 @@
                         <div class="menu-item">
                             <a href="{{ route('contact')}}" class="links-in-aside">Contato</a>
                         </div>
-                        <a href="" class="link-orcamento">Enviar mensagem</a>
+                        <a href="{{ route('mensagem')}}" class="link-orcamento">Enviar mensagem</a>
                     </nav>
             </aside>
         </header>
@@ -45,9 +45,9 @@
             <section class="banner1">
                 <img src="{{ asset('imagens/diversas/modelo-home.jpg') }}" alt="Imagem de apresentação com porta janela de correr sanfonada." class="img-banner">
                 <div class="texto-banner">
-                    <h1>Esquadrias de alumínio sob medida</h1>
+                    <h1>Esquadrias de alumínio <br> sob medida</h1>
                     <p>Qualidade, durabilidade e acabamento profissional.</p>
-                    <a href="" class="link-orcamento">Solicitar orçamento</a>
+                    <a href="{{ route('mensagem')}}" class="link-orcamento">Solicitar orçamento</a>
                 </div>
             </section>
             <section class="banner2">
@@ -74,33 +74,45 @@
                 <div class="container-servicos">
                     <div class="card-servico">
                         <img src="{{ asset('/imagens/img-home/jc4f.png') }}" alt="Imagem de janela de correr 4 folhas">
-                        <h2>Janelas de correr</h2>
-                        <p>Janelas de correr com diversas opções de cores, folhas e modelos.</p>
+                        <div class="card-text">
+                            <h2>Janelas de correr</h2>
+                            <p>Janelas de correr com diversas opções de cores, folhas e modelos.</p>
+                        </div>
                     </div>
                     <div class="card-servico">
                         <img src="{{ asset('/imagens/img-home/pj3f.png') }}" alt="Imagem de porta de correr 3 folhas sequencial">
-                        <h2>Porta janela de correr</h2>
-                        <p>Porta janela dos mais diversos modelos e tamanhos.</p>
+                        <div class="card-text">
+                            <h2>Porta janela de correr</h2>
+                            <p>Porta janela dos mais diversos modelos e tamanhos.</p>
+                        </div>
                     </div>
                     <div class="card-servico">
                         <img src="{{ asset('/imagens/img-home/fachada.png') }}" alt="Imagem de uma fachada">
-                        <h2>Fachada</h2>
-                        <p>Fachadas trazem sofisticação e  estilo para sua obra.</p>
+                        <div class="card-text">
+                            <h2>Fachada</h2>
+                            <p>Fachadas trazem sofisticação e  estilo para sua obra.</p>
+                        </div>
                     </div>
                     <div class="card-servico">
                         <img src="{{ asset('/imagens/img-home/mx.png') }}" alt="Imagem de uma maxim-ar">
-                        <h2>Maxim-ar</h2>
-                        <p>Janelas para banheiro e áreas de serviço, trazendo praticidade e segurança.</p>
+                        <div class="card-text">
+                            <h2>Maxim-ar</h2>
+                            <p>Janelas para banheiro e áreas de serviço, trazendo praticidade e segurança.</p>
+                        </div>
                     </div>
                     <div class="card-servico">
                         <img src="{{ asset('/imagens/img-home/portao.png') }}" alt="Imagem de um portão">
-                        <h2>Portões</h2>
-                        <p>Os mais diversos modelos de portões, do basculante ao de correr.</p>
+                        <div class="card-text">
+                            <h2>Portões</h2>
+                            <p>Os mais diversos modelos de portões, do basculante ao de correr.</p>
+                        </div>
                     </div>
                     <div class="card-servico">
                         <img src="{{ asset('/imagens/img-home/gp.png') }}" alt="Imagem de uma guarda corpo de vidro temperado">
-                        <h2>Guarda corpo</h2>
-                        <p>Além de segurança, os guarda corpos possuem relevância quando se fala em estética residencial.</p>
+                        <div class="card-text">
+                            <h2>Guarda corpo</h2>
+                            <p>Além de segurança, os guarda corpos possuem relevância quando se fala em estética residencial.</p>
+                        </div>
                     </div>
                 </div>
                 <a href="{{ route('mensagem') }}" class="link-orcamento">Enviar mensagem</a>
