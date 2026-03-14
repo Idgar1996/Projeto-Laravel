@@ -6,27 +6,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <link href="{{ asset('css/mensagem.css')}}" rel="stylesheet"/>
-        @vite(['resources/js/app/js', 'resources/css/app.css'])
     </head>
     <body>
-        <header class="header">
-            <a href="{{ route('home') }}">
-                <img src="{{ asset('imagens/logo/logo_alusim1.png') }}" alt="Logo Alusim" class="logo" title="Logo Alusim">
+        <header class="container-header">
+            <a href="{{ route('home') }}" class="img-link-header">
+                <img src="{{ asset('imagens/diversas/logo_alusim1.png')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">
             </a>
-            <aside class="aside">
-                    <nav class="menu-nav">
+            <aside class="menu-aside">
+                    <nav class="menu-nav-in-aside">
                         <div class="menu-item">
-                            <a href="{{ route('home') }}" class="links">Home</a>
+                            <a href="{{ route('home')}}" class="links-in-aside">Home</a>
                         </div>
                         <div class='menu-item'>
-                            <a href="{{ route('servicos') }}" class="links">Fotos</a>
+                            <a href="{{ route('servicos')}}" class="links-in-aside">Fotos</a>
                         </div>
                         <div class="menu-item">
-                            <a href="{{ route('about') }}" class="links">Sobre nós</a>
+                            <a href="{{ route('about')}}" class="links-in-aside">Sobre nós</a>
                         </div>
                         <div class="menu-item">
-                            <a href="{{ route('contact') }}" class="links">Contato</a>
+                            <a href="{{ route('contact')}}" class="links-in-aside">Contato</a>
                         </div>
+                        <a href="{{ route('mensagem')}}" class="link-orcamento">Enviar mensagem</a>
                     </nav>
             </aside>
         </header>
@@ -197,8 +197,14 @@
             <script src="{{ asset('js/mascaraCep.js') }}"></script>
             <script src="{{ asset('js/buscaCep.js') }}"></script>
         </main>
-        <footer class="rodape">
-            <h3>© 2025 copyright. Todos os direitos reservados.</h3>
+        <footer class="footer">
+            <img src="{{ asset('/imagens/diversas/logo_branco.png') }}" alt="Logo branco Alusim">
+            <h2>Esquadrias de alumínio sob medida com qualidade e precisão.</h2>
+            <div class="painel-infos">
+                <h3>Alusim Esquadrias LTDA</h3>
+                <p>(51) 99594-4991</p>
+                <p>Rua Irmão Weibert, 144, Centro - Bom Princípio</p>
+            </div>
         </footer>
     </body>
 </html>

@@ -5,11 +5,11 @@
 
 :root {
     /* Font-size padrão */
-    --fonte-titulo: 4.375rem;
-    --fonte-titulo2: 2.5rem;
-    --fonte-subtitulo: 2rem;
-    --fonte-subtitulo2: 1.25rem;
-    --fonte-subtitulo3: 1.625rem;
+    --fonte-titulo: 3.125rem;
+    --fonte-titulo2: 2.074rem;
+    --fonte-subtitulo: 1.728rem;
+    --fonte-subtitulo2: 1.44rem;
+    --fonte-subtitulo3: 1.2rem;
     --font-texto: 1rem;
 
     /* Cores padrão */
@@ -173,6 +173,9 @@ body {
 }
 .container-texto {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .container-texto h3 {
     font-size: var(--fonte-titulo);
@@ -180,10 +183,10 @@ body {
     font-weight: bold;
 }
 .container-texto p {
-    font-size: var(--fonte-subtitulo);
+    font-size: var(--fonte-subtitulo2);
 }
 .link-bottom {
-    padding: 1.5rem 8rem;
+    padding: 1rem 6rem;
     background-color: var(--cor-botao);
     font-size: var(--fonte-subtitulo3);
     font-weight: bold;

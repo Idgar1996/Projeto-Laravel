@@ -5,11 +5,11 @@
 
 :root {
     /* Font-size padrão */
-    --fonte-titulo: 4.375rem;
-    --fonte-titulo2: 2.5rem;
-    --fonte-subtitulo: 2rem;
-    --fonte-subtitulo2: 1.25rem;
-    --fonte-subtitulo3: 1.625rem;
+    --fonte-titulo: 3.125rem;
+    --fonte-titulo2: 2.074rem;
+    --fonte-subtitulo: 1.728rem;
+    --fonte-subtitulo2: 1.44rem;
+    --fonte-subtitulo3: 1.2rem;
     --font-texto: 1rem;
 
     /* Cores padrão */
@@ -28,7 +28,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Cabin", sans-serif;
+    font-family: Arial,"Cabin", sans-serif;
     box-sizing: border-box;
 }
 
@@ -120,7 +120,6 @@ body {
 
 .banner1{
     position: relative;
-    display: inline-block;
 }
 .img-banner {
     object-fit: cover;
@@ -186,7 +185,7 @@ body {
     font-size: var(--fonte-titulo2);
 }
 .container-skill p {
-    font-size: var(--fonte-subtitulo2);
+    font-size: var(--fonte-subtitulo3);
     text-align: center;
     width: 60%;
 }
@@ -238,8 +237,10 @@ body {
     width: 100%;
     border-radius: var(--raio-borda-imagens);
 }
-.card-servico h2, .card-servico p {
-    text-indent: 1.25rem;
+.card-text {
+    display: flex;
+    flex-direction: column;
+    padding: 1.125rem;
 }
 
 /* Parametrização do footer */
@@ -261,10 +262,10 @@ body {
     height: 5rem;
 }
 .footer h2 {
-    font-size: var(--fonte-subtitulo3);
+    font-size: var(--fonte-subtitulo2);
 }
 .footer h3 {
-    font-size: var(--fonte-subtitulo2);
+    font-size: var(--fonte-subtitulo3);
 }
 .footer p {
     font-size: var(--font-texto)

@@ -23,7 +23,7 @@
             z-index: 9999;
             max-width: 500px;
             width: 400px;
-            heigth: 40px;
+            height: 40px;
             text-align: center;
             animation: slideIn 0.3s ease;">
 
