@@ -86,7 +86,7 @@
                 </div>
                 <div class="card-go-message">
                     <div class="container-texto">
-                        <h3>Precisando de esquadrias para a sua obra?</h3>
+                        <h3>Precisando de esquadrias <br> para a sua obra?</h3>
                         <p>Entre em contato e solicite um orçamento sem compromisso.</p>
                     </div>
                     <a href="{{ route('mensagem') }}" class="link-bottom">Solicitar orçamento</a>
