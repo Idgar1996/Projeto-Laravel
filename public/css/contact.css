@@ -1,199 +1,206 @@
-/* Parâmetros iniciais para facilitar a construção */
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Parâmetros e variáveis iniciais que facilitam a construção do site */
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root {
-    font-size: 16px;
-}
+/* Parametros iniciais para "zerar" certas medidas automáticas */
 
+:root {
+    /* Font-size padrão */
+    --fonte-titulo: 3.125rem;
+    --fonte-titulo2: 2.074rem;
+    --fonte-subtitulo: 1.728rem;
+    --fonte-subtitulo2: 1.44rem;
+    --fonte-subtitulo3: 1.2rem;
+    --font-texto: 1rem;
+
+    /* Cores padrão */
+    --cor-fundo: #f3f1f4;
+    --cor-fonte: #333;
+    --cor-botao: #c60202;
+    --cor-hover: #d32f2f;
+    --cor-fundo-banner: #fdfbfc;
+    --cor-divisoria: #e0e0e0;
+    --cor-testes: #27e327;
+
+    /* Bordas padrão */
+    --raio-borda-botoes: 0.5rem;
+    --raio-borda-imagens: 0.25rem;
+
+    /* Tamanho padrão ícones */
+    --altura-icone: 3.125rem;
+}
 * {
     padding: 0;
     margin: 0;
-    font-family: "Cabin", sans-serif;
+    font-family: Arial,"Cabin", sans-serif;
     box-sizing: border-box;
 }
 
-/* Área do body */
+/* Parametrização do body: */
+/* Principais definições que ditarão a forma e o estilo do corpo visível do site */
 
 body {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    justify-content: space-between;
-    background-image: linear-gradient(to bottom,
-                                        #adacac80 0%, 
-                                        #adacac80 20%, 
-                                        #7c797980 45%, 
-                                        #7c797980 55%, 
-                                        #adacac80 80%,  
-                                        #adacac80 100%);
-    border: 2px solid crimson;
 }
 
-/* Área do header */
+/* Parametrização do header, bem como de seus elementos */
+/* Ajustes do containber principal que abranje tanto o logo (link) como o menu lateral de navegação */
+/* Ajuste e configuração do logo que serve como link de retorno para a página "Home" */
+/* Menu lateral com os principais links de navegação entre as páginas do site */
 
-.header {
+.container-header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: start;
+    padding: 0 3.75rem 0 3.75rem;
     width: 100%;
-    min-height: 300px;
-    padding: 20px;
+    height: 6.785rem;
+    background-color: var(--cor-fundo);
 }
-
-.logo {
-    height: 90%;
-    margin-left: 100px;
-    transition: box-shadow 0.4s ease, transform 0.4s ease;
-    border-radius: 10px;
+.img-link-header {
+    width: 50%;
 }
-.logo:hover {
-    transform: scale(1.05);
-    box-shadow: 4px 4px 6px #7c797980;
-    border-radius: 10px;
+.logo-in-header {
+    height: 6.785rem;
 }
-
-.aside {
+.menu-aside {
+    display: flex;
+    align-items: center;
+    width: 50%;
     height: 100%;
-    width: 180px;
+}
+.menu-nav-in-aside {
     display: flex;
-    justify-content: center;
-    position: relative;
-    margin-right: 150px;
-}
-
-.menu-nav {
-    width: 180px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.menu-item {
-    height: 50px;
-    width: auto;
-    align-items: start;
-    color: #333333;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 5px 5px 5px 5px;
-}
-.links {
-    color: #333333;
-    font-size: 28px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    display:block;
-    padding: 12px 15px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    text-decoration: none;
-    border-radius: 10px;
-}
-.links:hover {
-    transform: scale(1.2);
-    color: crimson;
-    text-shadow: 1px 1px 2px #333333;
-    box-shadow: 2px 2px 4px #7c797980;
-    border-radius: 10px;
-}
-
-/* Área do main */
-
-.contatos {
-    display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    justify-content: space-around;
+    height: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--fonte-subtitulo);
+}
+.links-in-aside {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: var(--fonte-subtitulo);
+}
+.links-in-aside:hover{
+    color: var(--cor-hover);
+}
+.link-orcamento {
+    width: 10rem;
+    height: 3.125rem;
+    background-color: var(--cor-botao);
+    font-size: var(--font-texto);
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    display: flex;
     align-items: center;
-    height: 450px;
+    justify-content: center;
+    border-radius: var(--raio-borda-botoes);
+    transition: all 0.2s ease;
+}
+.link-orcamento:hover {
+    background-color: var(--cor-hover);
+    border-radius: var(--raio-borda-botoes);
 }
 
-.nossos-contatos {
+/* Parametrização do main */
+
+.main {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 450px;
-    height: auto;
-}
-.telefone {
-    display: flex;
-    width: auto;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-}
-.email {
-    display: flex;
-    width: auto;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-}
-.info-box {
-    display: flex;
-    width: auto;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    transition: all 0.4s ease;
-    padding: 10px;
-}
-.info-box:hover{
-    transform:scale(1.1);
-    box-shadow: 2px 2px 4px #7c797980;
-    border-radius: 10px;
-}
-.icones {
-    width: 30px;
-    height: auto;
-}
-.link {
-    width: auto;
-    height: auto;
-    text-decoration: none;
-    transition: text-decoration 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
-    color: darkolivegreen;
+    max-width: 100%;
+    padding: 1.125rem;
 }
 
-.link:hover {
-    text-decoration: underline;
-    color: crimson;
-}
+/* Parametrização da sessão de contatos */
+/* Ajustes dos ícones */
+/* Personalização dos links */
+/* Ajustes dos textos */
 
-.mensagem {
+.container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center ;
-    width: 550px;
-    gap: 15px;
-    font-size: 22px;
-    gap:30px;
-    text-decoration: none;
-    transition: box-shadow 0.5s ease, transform 0.5s ease-in-out;
-    border-radius: 10px;
-    padding: 20px 20px 20px 20px;
+    padding: 2.125rem;
+    gap: 2rem;
 }
-.mensagem:hover {
-    transform: scale(1.1);
-    box-shadow: 2px 2px 4px #7c797980;
-    border-radius: 10px;
-    padding: 20px 20px 20px 20px;
+.container h2 {
+    width: 60%;
+    text-indent: 2rem;
+    text-align: justify; 
 }
-.mensagem h2 {
-    font-style: normal;
-    font-size: 42px;
+.container-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
-.mensagem p {
-    text-align: justify;
-    text-indent: 20px;
-    padding: 10px;
+.card-contato {
+    display: flex;
+    background-color: var(--cor-fundo);
+    gap: 2rem;
+    padding: 3.125rem;
+    border-radius: var(--raio-borda-botoes);
+}
+.card-contato img {
+    height: var(--altura-icone);
 }
 
-.rodape {
+.text-card {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: start;
-    width: auto;
-    height: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.250rem;
+}
+.text-card h2{
+    width: 100%;
+    text-indent: 0;
+}
+.text-card a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: var(--cor-botao);
+}
+.text-card a:hover {
+    color: var(--cor-testes);
+}
+
+/* Parametrização do footer */
+/* Inserção do logo */
+/* Slogan */
+/* Infos de endereço */
+
+.footer {
+    display: flex;
+    background-color: var(--cor-fonte);
+    color: var(--cor-fundo);
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
+    align-items: center;
+}
+.footer img {
+    margin-left: 2.5rem;
+    height: 5rem;
+}
+.footer h2 {
+    font-size: var(--fonte-subtitulo2);
+}
+.footer h3 {
+    font-size: var(--fonte-subtitulo3);
+}
+.footer p {
+    font-size: var(--font-texto)
+}
+.painel-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

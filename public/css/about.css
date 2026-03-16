@@ -112,6 +112,7 @@ body {
     flex-direction: column;
     max-width: 100%;
     padding: 1.125rem;
+    gap: 1.625rem;
 }
 
 /* Parametrização da sessão sobre nós */
@@ -120,16 +121,36 @@ body {
 
 .container-about {
     background-color: var(--cor-fundo);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     padding: 2.125rem;
+    align-items: center;
+    justify-items: center;
+    border-radius: var(--raio-borda-botoes);
 }
 .container-text {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 2.125rem;
+    gap: 0.625rem;
+    text-align: justify;
 }
+.container-text h2 {
+    font-size: var(--fonte-titulo2);
+}
+.container-text p {
+    font-size: var(--fonte-subtitulo3);
+    text-indent: 2rem;
+}
+
 .container-about img{
-    width: 50%;
+    width: 31.25rem;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--raio-borda-imagens);
 }
 /* Parametrização do footer */
 /* Inserção do logo */

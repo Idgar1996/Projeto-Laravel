@@ -20,6 +20,8 @@
     --cor-fundo-banner: #fdfbfc;
     --cor-divisoria: #e0e0e0;
     --cor-testes: #27e327;
+    --cor-botao-enviar: #02b902;
+    --cor-botao-enviar-hover:#27e327;
 
     /* Bordas padrão */
     --raio-borda-botoes: 0.5rem;
@@ -86,7 +88,94 @@ body {
 .links-in-aside:hover{
     color: var(--cor-hover);
 }
-.link-orcamento {
+/* Parametrização do main */
+/* Separação por sessão */
+/* Categorização por tipos de dados */
+/* Dados pessoais */
+/* Dados da obra */
+/* Informações relevantes sobre a obra */
+/* Mensagem descritiva */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 1.125rem;
+}
+.container-form-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 2.125rem;
+}
+.container-form-dados h1 {
+    font-size: var(--fonte-titulo);
+}
+.container-form-dados h2 {
+    font-size: var(--fonte-titulo2);
+}
+.container-dados {
+    display: flex;
+    flex-direction: column;
+    padding: 1.125rem;
+    background-color: var(--cor-fundo);
+    gap: 0.625rem;
+    border-radius: var(--raio-borda-botoes);
+}
+.container-dados h3 {
+    font-size: var(--fonte-subtitulo);
+}
+.container-dados label {
+    font-size: var(--fonte-subtitulo3);
+}
+.card-dados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 1.125rem;
+    row-gap: 1.125rem;
+}
+.input-dados{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.input-dados input {
+    padding: 0.625rem 0.250rem;
+    border-radius: var(--raio-borda-botoes);
+    border-color: transparent;
+    font-size: var(--fonte-subtitulo3);
+}
+#estado select {
+    padding: 0.5rem;
+    width: 30%;
+    background-color: var(--cor-fundo-banner);
+    border-radius: var(--raio-borda-botoes);
+    border-color: transparent;
+}
+#informacoes select {
+    padding: 0.5rem;
+    width: 50%;
+    background-color: var(--cor-fundo-banner);
+    border-radius: var(--raio-borda-botoes);
+    border-color: transparent;
+}
+.container-mensagem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
+.container-mensagem textarea {
+    padding: 0.625rem;
+    border-color: transparent;
+    border-radius: var(--raio-borda-botoes);
+}
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.container-botoes > .botao-resetar-formulario{
     width: 10rem;
     height: 3.125rem;
     background-color: var(--cor-botao);
@@ -99,22 +188,31 @@ body {
     justify-content: center;
     border-radius: var(--raio-borda-botoes);
     transition: all 0.2s ease;
+    border-color: transparent;
 }
-.link-orcamento:hover {
+.container-botoes > .botao-resetar-formulario:hover{
     background-color: var(--cor-hover);
     border-radius: var(--raio-borda-botoes);
 }
-
-/* Parametrização do main */
-
-.main {
+.container-botoes > .botao-enviar{
+    width: 10rem;
+    height: 3.125rem;
+    background-color: var(--cor-botao-enviar);
+    font-size: var(--font-texto);
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
     display: flex;
-    flex-direction: column;
-    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--raio-borda-botoes);
+    transition: all 0.2s ease;
+    border-color: transparent;
 }
-
-
-
+.container-botoes > .botao-enviar:hover{
+    background-color: var(--cor-botao-enviar-hover);
+    border-radius: var(--raio-borda-botoes);
+}
 /* Parametrização do footer */
 /* Inserção do logo */
 /* Slogan */

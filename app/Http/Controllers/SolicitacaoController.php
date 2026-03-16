@@ -12,14 +12,21 @@ class SolicitacaoController extends Controller
 {
     public function store(Request $request)
     {
+        // Limpas os dados
+        $request->merge([
+                'documento' => preg_replace('/\D/', '', $request->documento),
+                'telefone' => preg_replace('/\D/', '', $request->telefone),
+                'cep' => preg_replace('/\D/', '', $request->cep),
+                'email' => strtolower($request->email),
+            ]);
         // Validação
         $request->validate([
             'nome' => 'required|string|max:255',
             'sobrenome' => 'required|string|max:255',
             'tipo_documento' => 'required|in:cpf,cnpj',
-            'documento' => 'required|string',
+            'documento' => 'required|string|unique:solicitacoes,documento',
             'telefone' => 'required|string',
-            'email' => 'required|string',
+            'email' => 'required|string|unique:solicitacoes,email',
             'estado' => 'required|string',
             'cep' => 'required|string',
             'cidade' => 'required|string',
@@ -27,8 +34,8 @@ class SolicitacaoController extends Controller
             'numero' => 'required|string',
             'bairro' => 'required|string',
             'cor' => 'required|string',
-            'tipo_obra' => 'required|in:Nova,Reforma,Ampliação',
-            'remocao' => 'required|in:Sim,Não',
+            'tipo_obra' => 'required|string',
+            'remocao' => 'required|string',
             'mensagem' => 'required|string',
         ]);
 
@@ -65,7 +72,7 @@ class SolicitacaoController extends Controller
 
         Mail::to('geanschneider1996@gmail.com')->send(new SolicitacaoMail($solicitacao));
 
-        return redirect()->route('home')->with('success', 'Solicitação enviada com sucesso! Em breve entraremos em contato!');
+        return redirect()->route('mensagem')->with('success', 'Solicitação enviada com sucesso! Em breve entraremos em contato!');
     }
 
 }
