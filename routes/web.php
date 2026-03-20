@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SolicitacaoController;
+use App\Http\Controllers\ImagemController;
 
 /* Páginas estáticas */
 
@@ -14,4 +15,7 @@ Route::view('/mensagem', 'mensagem')->name('mensagem');
 
 Route::post('/solicitacao', [SolicitacaoController::class, 'store'])->name('solicitacao.store');
 
-Route::view('/mensagem/enviada', 'mensagem_enviada')->name('mensagem.enviada');
+
+
+Route::post('/imagem', [\App\Http\Controllers\ImagemController::class, 'store'])->name('imagem.store');
+Route::get('/imagem/{filename}', [\App\Http\Controllers\ImagemController::class, 'show'])->name('imagem.show');

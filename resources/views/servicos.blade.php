@@ -36,51 +36,51 @@
                 <h2>Alguns trabalhos realizados pela Alusim.</h2>
                 <div class="container-imagens">
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'JC') }}" alt="Imagem de teste">
                         <h3>Janela de correr</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'PC') }}" alt="Imagem de teste">
                         <h3>Porta janela</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'PG') }}" alt="Imagem de teste">
                         <h3>Porta de giro</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'PP') }}" alt="Imagem de teste">
                         <h3>Porta pivotante</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'MA') }}" alt="Imagem de teste">
                         <h3>Janela maxim-ar</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'PS') }}" alt="Imagem de teste">
                         <h3>Persiana</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'VZ') }}" alt="Imagem de teste">
                         <h3>Sanfonada</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'PT') }}" alt="Imagem de teste">
                         <h3>Portão</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'GC') }}" alt="Imagem de teste">
                         <h3>Guarda corpo</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'FC') }}" alt="Imagem de teste">
                         <h3>Fachada</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'PL') }}" alt="Imagem de teste">
                         <h3>Pergolado</h3>
                     </div>
                     <div class="card-servico">
-                        <img src="{{ asset('imagens/diversas/imagem-teste.png') }}" alt="Imagem de teste">
+                        <img src="{{ route('imagem.show', 'CR') }}" alt="Imagem de teste">
                         <h3>Corrimão</h3>
                     </div>
                 </div>
