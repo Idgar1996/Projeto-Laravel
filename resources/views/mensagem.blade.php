@@ -5,7 +5,7 @@
         <meta name="description" content="Site de orçamentos para aberturas de aluminio ">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <link href="{{ asset('css/mensagem.css')}}" rel="stylesheet"/>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
         <header class="container-header">
@@ -187,10 +187,6 @@
                     </div>
                 </section>
             </form>
-            <script src="{{ asset('js/mascaraDocumento.js') }}"></script>
-            <script src="{{ asset('js/mascaraTelefone.js') }}"></script>
-            <script src="{{ asset('js/mascaraCep.js') }}"></script>
-            <script src="{{ asset('js/buscaCep.js') }}"></script>
         </main>
         <footer class="footer">
             <img src="{{ asset('/imagens/diversas/logo_branco.png') }}" alt="Logo branco Alusim">

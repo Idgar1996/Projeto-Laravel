@@ -1,9 +1,9 @@
 import './bootstrap';
 
-import '../../public/js/mascaraDocumento'
+import './mascaras/mascaraDocumento'
 
-import '../../public/js/mascaraTelefone'
+import './mascaras/mascaraTelefone'
 
-import '../../public/js/mascaraCep'
+import './mascaras/mascaraCep'
 
-import '../../public/js/auxiliar'
+import './mascaras/buscaCep'
