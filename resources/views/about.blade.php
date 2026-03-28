@@ -10,7 +10,7 @@
     <body class="body">
         <header class="container-header">
             <a href="{{ route('home') }}" class="img-link-header">
-                <img src="{{ asset('imagens/diversas/logo_alusim1.png')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">
+                <img src="{{ Vite::asset('resources/assets/img/logos/logo_alusim1.webp')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">
             </a>
             <aside class="menu-aside">
                     <nav class="menu-nav-in-aside">
@@ -36,7 +36,7 @@
                     <h2 title="Apresentação" class=""> Bem vindos ao nosso site de orçamentos para aberturas de alumínio!</h2>
                     <p id="">Bem-vindo ao equilíbrio perfeito entre <b>estilo e custo-benefício</b>. Sua abertura de alumínio personalizada, combinando beleza, funcionalidade e um valor que surpreende. Transforme sua casa com a leveza e durabilidade do alumínio. Criamos aberturas sob medida, que refletem seu estilo e se adaptam ao seu projeto. <b><i>E o melhor</i></b>: uma solução exclusiva que valoriza seu espaço e cabe no seu orçamento.</p>
                 </div>
-                <img src="{{ asset('imagens/sobre-nos/bem-vindo.png') }}" alt="Imagem de Boas Vindas" class="">
+                <img src="{{ Vite::asset('resources/assets/img/sobre-nos/bem-vindo.webp') }}" alt="Imagem de Boas Vindas" class="">
             </section>
             <section class="container-about">
                 <div class="container-text">
@@ -44,7 +44,7 @@
                     <p>A história da Alusim começa muito antes da abertura de nossa primeira fábrica; ela começa com um entendimento profundo do que significa transformar matéria-prima em qualidade e confiança. Fundada em Bom Princípio, uma região reconhecida nacionalmente como um polo de excelência em fabricação e design, nossa empresa nasceu já imersa em uma cultura de trabalho árduo, precisão e capricho.</p>
                     <p>Desde início, somos uma empresa dedicada, onde o conhecimento técnico se une ao cuidado artesanal. Acreditávamos, e ainda acreditamos, que uma esquadria de alumínio vai muito além de uma simples abertura em uma parede. Ela é a moldura que resignifica a sua vista, a entrada de luz que transforma um ambiente, e o elemento que une o interior ao exterior com elegância e segurança.</p>
                 </div>
-                <img src="{{ asset('imagens/sobre-nos/nossa-fabrica.png') }}" alt="Nossa Fábrica" class="">
+                <img src="{{ Vite::asset('resources/assets/img/sobre-nos/nossa-fabrica.webp') }}" alt="Nossa Fábrica" class="">
             </section>
             <section class="container-about">
                 <div class="container-text">    
@@ -56,11 +56,11 @@
                     <p>Ao incorporar o alumínio às nossas operações, agregamos durabilidade, versatilidade, design contemporâneo e um novo conceito de sofisticação para nossos clientes. Essa mudança não representou apenas a ampliação de produtos: simbolizou um salto de modernidade e profissionalização, consolidando uma marca preparada para atender projetos cada vez mais exigentes.</p>
                     <p>Hoje, seguimos firmes no propósito que nos trouxe até aqui: entregar soluções inteligentes, seguras e alinhadas ao que há de mais atual no setor de esquadrias — sempre guiados pela paixão que nos move desde o primeiro dia.</p>
                 </div>
-                <img src="{{ asset('imagens/sobre-nos/equipe.png') }}" alt="Equipe" class="">
+                <img src="{{ Vite::asset('resources/assets/img/sobre-nos/equipe.webp') }}" alt="Equipe" class="">
             </section>
         </main>
         <footer class="footer">
-            <img src="{{ asset('/imagens/diversas/logo_branco.png') }}" alt="Logo branco Alusim">
+            <img src="{{ Vite::asset('resources/assets/img/logos/logo_branco.webp') }}" alt="Logo branco Alusim">
             <h2>Esquadrias de alumínio sob medida com qualidade e precisão.</h2>
             <div class="painel-infos">
                 <h3>Alusim Esquadrias LTDA</h3>

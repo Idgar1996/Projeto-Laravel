@@ -1,10 +1,10 @@
-@import 'tailwindcss';
+@import './base.css';
 @import './home.css';
 @import './servicos.css';
 @import './about.css';
 @import './contact.css';
 @import './mensagem.css';
-@import './base.css';
+
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
