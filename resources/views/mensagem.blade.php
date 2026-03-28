@@ -10,7 +10,7 @@
     <body>
         <header class="container-header">
             <a href="{{ route('home') }}" class="img-link-header">
-                <img src="{{ asset('imagens/diversas/logo_alusim1.png')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">
+                <img src="{{ Vite::asset('resources/assets/img/logos/logo_alusim1.webp')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">
             </a>
             <aside class="menu-aside">
                     <nav class="menu-nav-in-aside">
@@ -189,7 +189,7 @@
             </form>
         </main>
         <footer class="footer">
-            <img src="{{ asset('/imagens/diversas/logo_branco.png') }}" alt="Logo branco Alusim">
+            <img src="{{ Vite::asset('resources/assets/img/logos/logo_branco.webp') }}" alt="Logo branco Alusim">
             <h2>Esquadrias de alumínio sob medida com qualidade e precisão.</h2>
             <div class="painel-infos">
                 <h3>Alusim Esquadrias LTDA</h3>

@@ -1,233 +1,233 @@
-/* Parametrização do header, bem como de seus elementos */
-/* Ajustes do containber principal que abranje tanto o logo (link) como o menu lateral de navegação */
-/* Ajuste e configuração do logo que serve como link de retorno para a página "Home" */
-/* Menu lateral com os principais links de navegação entre as páginas do site */
+    /* Parametrização do header, bem como de seus elementos */
+    /* Ajustes do containber principal que abranje tanto o logo (link) como o menu lateral de navegação */
+    /* Ajuste e configuração do logo que serve como link de retorno para a página "Home" */
+    /* Menu lateral com os principais links de navegação entre as páginas do site */
 
-.container-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3.75rem 0 3.75rem;
-    width: 100%;
-    height: 6.785rem;
-    background-color: var(--cor-fundo);
-}
-.img-link-header {
-    width: 50%;
-}
-.logo-in-header {
-    height: 6.785rem;
-}
-.menu-aside {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-}
-.menu-nav-in-aside {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: var(--fonte-subtitulo);
-}
-.links-in-aside {
-    color: var(--cor-fonte);
-    text-decoration: none;
-    font-size: var(--fonte-subtitulo);
-}
-.links-in-aside:hover{
-    color: var(--cor-hover);
-}
-.link-orcamento {
-    width: 10rem;
-    height: 3.125rem;
-    background-color: var(--cor-botao);
-    font-size: var(--font-texto);
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--raio-borda-botoes);
-    transition: all 0.2s ease;
-}
-.link-orcamento:hover {
-    background-color: var(--cor-hover);
-    border-radius: var(--raio-borda-botoes);
-}
+    .container-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3.75rem 0 3.75rem;
+        width: 100%;
+        height: 6.785rem;
+        background-color: var(--cor-fundo);
+    }
+    .img-link-header {
+        width: 50%;
+    }
+    .logo-in-header {
+        height: 6.785rem;
+    }
+    .menu-aside {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+    }
+    .menu-nav-in-aside {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: var(--fonte-subtitulo);
+    }
+    .links-in-aside {
+        color: var(--cor-fonte);
+        text-decoration: none;
+        font-size: var(--fonte-subtitulo);
+    }
+    .links-in-aside:hover{
+        color: var(--cor-hover);
+    }
+    .link-orcamento {
+        width: 10rem;
+        height: 3.125rem;
+        background-color: var(--cor-botao);
+        font-size: var(--font-texto);
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--raio-borda-botoes);
+        transition: all 0.2s ease;
+    }
+    .link-orcamento:hover {
+        background-color: var(--cor-hover);
+        border-radius: var(--raio-borda-botoes);
+    }
 
-/* Parametrização do main */
+    /* Parametrização do main */
 
-.main {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-}
+    .main {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
 
-/* Parametrização do banner inicial com os seguintes elementos: */
-/* Imagem de fundo */
-/* Titulo introdutório */
-/* Botão de redirecionamento para o orçamento */
+    /* Parametrização do banner inicial com os seguintes elementos: */
+    /* Imagem de fundo */
+    /* Titulo introdutório */
+    /* Botão de redirecionamento para o orçamento */
 
-.banner1{
-    position: relative;
-}
-.img-banner {
-    object-fit: cover;
-    width: 100%;
-    height: 31.25rem;
-    display: block;
-}
-.texto-banner {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-}
-.texto-banner *:last-child{
-    margin-top: 0.625rem;
-}
-.texto-banner h1 {
-    font-size: var(--fonte-titulo);
-}
-.texto-banner p {
-    font-size: var(--fonte-subtitulo);
-}
+    .banner1{
+        position: relative;
+    }
+    .img-banner {
+        object-fit: cover;
+        width: 100%;
+        height: 31.25rem;
+        display: block;
+    }
+    .texto-banner {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+    }
+    .texto-banner *:last-child{
+        margin-top: 0.625rem;
+    }
+    .texto-banner h1 {
+        font-size: var(--fonte-titulo);
+    }
+    .texto-banner p {
+        font-size: var(--fonte-subtitulo);
+    }
 
-/* Parametrização do banner 2 com as principais características da empresa: */
-/* Precisão */
-/* Profissionais capacitados */
-/* Acabamento premium */
-/* Anos de experiência */
+    /* Parametrização do banner 2 com as principais características da empresa: */
+    /* Precisão */
+    /* Profissionais capacitados */
+    /* Acabamento premium */
+    /* Anos de experiência */
 
-.banner2 {
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--cor-fundo-banner);
-    padding: 0 1.25rem 2.5rem 1.25rem;
-}
-.container-skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 22%;
-    text-align: center;
-    position: relative;
-}
-.container-skill:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: -12%;
-    top: 20%;
-    height: 16.625rem;
-    width: 0.125rem;
-    background-color: var(--cor-divisoria);
-}
-.container-skill img{
-    width: 11.25rem;
-}
-.container-skill h2{
-    font-size: var(--fonte-titulo2);
-}
-.container-skill p {
-    font-size: var(--fonte-subtitulo3);
-    text-align: center;
-    width: 60%;
-}
-/* Parametrização do container de pré-visualização */
-/* Preview dos serviços oferecidos */
-/* Amostra prévias dos principais tipo de aberturas produzidas */
-/* Janelas */
-/* Portas */
-/* Cercas */
-/* Portões */
-/* Guarda corpo */
-/* Pergolado */
+    .banner2 {
+        display: flex;
+        max-width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--cor-fundo-banner);
+        padding: 0 1.25rem 2.5rem 1.25rem;
+    }
+    .container-skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 22%;
+        text-align: center;
+        position: relative;
+    }
+    .container-skill:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -12%;
+        top: 20%;
+        height: 16.625rem;
+        width: 0.125rem;
+        background-color: var(--cor-divisoria);
+    }
+    .container-skill img{
+        width: 11.25rem;
+    }
+    .container-skill h2{
+        font-size: var(--fonte-titulo2);
+    }
+    .container-skill p {
+        font-size: var(--fonte-subtitulo3);
+        text-align: center;
+        width: 60%;
+    }
+    /* Parametrização do container de pré-visualização */
+    /* Preview dos serviços oferecidos */
+    /* Amostra prévias dos principais tipo de aberturas produzidas */
+    /* Janelas */
+    /* Portas */
+    /* Cercas */
+    /* Portões */
+    /* Guarda corpo */
+    /* Pergolado */
 
-.banner3 {
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    padding: 1.875rem;
-    background-color: var(--cor-fundo);
-    align-items: center;
-    gap: 1.875rem;
-}
-.banner3 h1 {
-    font-size: var(--fonte-titulo);
-    font-weight: bold;
-}
-.container-servicos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    width: 100%;
-    height: 100%;
-    row-gap: 2.5rem;
-    justify-items: center;
-    align-items: center;
-}
-.card-servico {
-    width: 80%;
-    height: 100%;
-    background-color: var(--cor-fundo-banner);
-    display: flex;
-    flex-direction: column;
-    padding: 0.625rem;
-    align-items: start;
-    gap: 0.3125rem;
-    text-align: justify;
-}
-.card-servico img {
-    width: 100%;
-    border-radius: var(--raio-borda-imagens);
-}
-.card-text {
-    display: flex;
-    flex-direction: column;
-    padding: 1.125rem;
-}
+    .banner3 {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        padding: 1.875rem;
+        background-color: var(--cor-fundo);
+        align-items: center;
+        gap: 1.875rem;
+    }
+    .banner3 h1 {
+        font-size: var(--fonte-titulo);
+        font-weight: bold;
+    }
+    .container-servicos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        height: 100%;
+        row-gap: 2.5rem;
+        justify-items: center;
+        align-items: center;
+    }
+    .card-servico {
+        width: 80%;
+        height: 100%;
+        background-color: var(--cor-fundo-banner);
+        display: flex;
+        flex-direction: column;
+        padding: 0.625rem;
+        align-items: start;
+        gap: 0.3125rem;
+        text-align: justify;
+    }
+    .card-servico img {
+        width: 100%;
+        border-radius: var(--raio-borda-imagens);
+    }
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        padding: 1.125rem;
+    }
 
-/* Parametrização do footer */
-/* Inserção do logo */
-/* Slogan */
-/* Infos de endereço */
+    /* Parametrização do footer */
+    /* Inserção do logo */
+    /* Slogan */
+    /* Infos de endereço */
 
-.footer {
-    display: flex;
-    background-color: var(--cor-fonte);
-    color: var(--cor-fundo);
-    width: 100%;
-    justify-content: space-between;
-    padding: 0.625rem 1.25rem;
-    align-items: center;
-}
-.footer img {
-    margin-left: 2.5rem;
-    height: 5rem;
-}
-.footer h2 {
-    font-size: var(--fonte-subtitulo2);
-}
-.footer h3 {
-    font-size: var(--fonte-subtitulo3);
-}
-.footer p {
-    font-size: var(--font-texto)
-}
-.painel-infos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .footer {
+        display: flex;
+        background-color: var(--cor-fonte);
+        color: var(--cor-fundo);
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.625rem 1.25rem;
+        align-items: center;
+    }
+    .footer img {
+        margin-left: 2.5rem;
+        height: 5rem;
+    }
+    .footer h2 {
+        font-size: var(--fonte-subtitulo2);
+    }
+    .footer h3 {
+        font-size: var(--fonte-subtitulo3);
+    }
+    .footer p {
+        font-size: var(--font-texto)
+    }
+    .painel-infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
