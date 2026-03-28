@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('nome');
             $table->string('sobrenome');
             $table->string('tipo_documento');
-            $table->string('documento')->unique();
+            $table->string('documento');
             $table->string('telefone');
-            $table->string('email')->unique();
+            $table->string('email')->nullable();
             $table->string('estado');
             $table->string('cep');
             $table->string('cidade');

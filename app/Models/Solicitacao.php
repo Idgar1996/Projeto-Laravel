@@ -26,4 +26,8 @@ class Solicitacao extends Model
         'remocao',
         'mensagem'
     ];
+
+    protected $casts = [
+        'remocao' => 'boolean',
+    ];
 }

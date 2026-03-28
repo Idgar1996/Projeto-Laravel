@@ -31,13 +31,13 @@
         </header>
         <main class="main">
             @if(session('success'))
-                <div style="background-color: #d4edda; color: #155724; padding: 15px; border: 1px solid #c3e6cb; border-radius: 5px; margin-bottom: 20px; width: 150px">
+                <div style="background-color: #d4edda; color: #155724; padding: 15px; border: 1px solid #c3e6cb; border-radius: 5px; margin-bottom: 20px; width: 300px">
                     {{ session('success') }}
                 </div>
             @endif
 
             @if($errors->any())
-                <div style="background-color: #f8d7da; color: #721c24; padding: 15px; border: 1px solid #f5c6cb; border-radius: 5px; margin-bottom: 20px;">
+                <div style="background-color: #f8d7da; color: #721c24; padding: 15px; border: 1px solid #f5c6cb; border-radius: 5px; margin-bottom: 20px; width: 300px">
                     <strong>Ops! Algo deu errado:</strong>
                     <ul>
                         @foreach($errors->all() as $error)
@@ -158,19 +158,19 @@
                                 <option value="AMADEIRADO">AMADEIRADO</option>
                             </select>
                         </div>
-                        <div class="input-dados" id="tipo-obra">
+                        <div class="input-dados">
                             <label for="tipo_obra">Selecione o tipo de obra:</label>
-                            <select name="tipo_obra">
+                            <select name="tipo_obra" id="tipo-obra">
                                 <option value="NOVA" selected>NOVA</option>
                                 <option value="REFORMA">REFORMA</option>
                                 <option value="AMPLIAÇÃO">AMPLIAÇÃO</option>
                             </select>
                         </div>
-                        <div class="input-dados" id="remocao">
+                        <div class="input-dados">
                             <label for="remocao">É necessário a remoção das aberturas antigas?</label>
-                            <select name="remocao">
-                                <option value="Sim" selected>SIM</option>
-                                <option value="Não">NÂO</option>
+                            <select name="remocao" id="remocao" disabled>
+                                <option value="Sim">SIM</option>
+                                <option value="Não" selected>NÂO</option>
                             </select>
                         </div>
                     </div>

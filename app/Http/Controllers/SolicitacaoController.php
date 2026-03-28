@@ -12,21 +12,31 @@ class SolicitacaoController extends Controller
 {
     public function store(Request $request)
     {
-        // Limpas os dados
+        $estadoFormatado = ucwords(str_replace('_', ' ', $request->estado));
+
+        if ($request->tipo_obra !== 'REFORMA') {
+            $request->merge(['remocao' => 0]);
+        } else {
+            $valorRemocao = ($request->remocao === 'Sim') ? 1 : 0;
+            $request->merge(['remocao' => $valorRemocao]);
+        }
+            
+        // // Limpas os dados
         $request->merge([
                 'documento' => preg_replace('/\D/', '', $request->documento),
                 'telefone' => preg_replace('/\D/', '', $request->telefone),
                 'cep' => preg_replace('/\D/', '', $request->cep),
                 'email' => strtolower($request->email),
+                'estado' => $estadoFormatado,
             ]);
         // Validação
         $request->validate([
             'nome' => 'required|string|max:255',
             'sobrenome' => 'required|string|max:255',
             'tipo_documento' => 'required|in:cpf,cnpj',
-            'documento' => 'required|string|unique:solicitacoes,documento',
+            'documento' => 'required|string',
             'telefone' => 'required|string',
-            'email' => 'required|string|unique:solicitacoes,email',
+            'email' => 'required|string',
             'estado' => 'required|string',
             'cep' => 'required|string',
             'cidade' => 'required|string',
@@ -35,42 +45,35 @@ class SolicitacaoController extends Controller
             'bairro' => 'required|string',
             'cor' => 'required|string',
             'tipo_obra' => 'required|string',
-            'remocao' => 'required|string',
+            'remocao' => 'required|boolean',
             'mensagem' => 'required|string',
         ]);
-
-        // limpa números
-        $cpfcnpj = preg_replace('/\D/', '', $request->documento);
-        $telefone = preg_replace('/\D/', '', $request->telefone);
-        $cep = preg_replace('/\D/', '', $request->cep);
-
-        // padroniza estado
-        $estado = str_replace('_', ' ', $request->estado);
-        $estado = ucwords($estado);
-
-        // padroniza remoção
-        $remocao = strtolower($request->remocao) == 'sim' ? 1 : 0;
 
         $solicitacao = Solicitacao::create([
             'nome' => ucwords(strtolower($request->nome)),
             'sobrenome' => ucwords(strtolower($request->sobrenome)),
             'tipo_documento' => $request->tipo_documento,
-            'documento' => $cpfcnpj,
-            'telefone' => $telefone,
+            'documento' => $request->documento,
+            'telefone' => $request->telefone,
             'email' => strtolower($request->email),
-            'estado' => $estado,
-            'cep' => $cep,
+            'estado' => $estadoFormatado,
+            'cep' => $request->cep,
             'cidade' => ucwords(strtolower($request->cidade)),
             'rua' => ucwords(strtolower($request->rua)),
             'numero' => $request->numero,
             'bairro' => ucwords(strtolower($request->bairro)),
             'cor' => $request->cor,
             'tipo_obra' => $request->input("tipo_obra"),
-            'remocao' => $remocao,
+            'remocao' => $request->remocao,
             'mensagem' => $request->mensagem,
         ]);
 
-        Mail::to('geanschneider1996@gmail.com')->send(new SolicitacaoMail($solicitacao));
+        try{
+            Mail::to('geanschneider1996@gmail.com')->send(new SolicitacaoMail($solicitacao));
+        } catch (\Exception $e) {
+            
+        }
+        
 
         return redirect()->route('mensagem')->with('success', 'Solicitação enviada com sucesso! Em breve entraremos em contato!');
     }

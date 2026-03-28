@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SolicitacaoController;
-use App\Http\Controllers\ImagemController;
+use App\Mail\SolicitacaoMail;
+use App\Models\Solicitacao;
 
 /* Páginas estáticas */
 
@@ -15,7 +16,33 @@ Route::view('/mensagem', 'mensagem')->name('mensagem');
 
 Route::post('/solicitacao', [SolicitacaoController::class, 'store'])->name('solicitacao.store');
 
+Route::get('/preview-email', function() {
+    
+    $solicitação = Solicitacao::latest()->first();
 
+    if (!$solicitação) {
+        $solicitação = new Solicitacao ([
+            'nome' => 'Gean',
+            'sobrenome' => 'Schneider',
+            'tipo_documento' => 'cpf',
+            'documento' => '000.000.000-00',
+            'telefone' => '51999999999',
+            'email' => 'teste@alusim.com.br',
+            'estado' => 'Rio Grande do Sul',
+            'cidade' => 'Bom Princípio',
+            'rua' => 'Rua Exemplo',
+            'numero' => '123',
+            'bairro' => 'Centro',
+            'cor' => 'Branco',
+            'tipo_obra' => 'Nova',
+            'remocao' => 'Sim',
+            'mensagem' => "Esta é uma mensagem de teste para verificar\no layout do e-mail com quebras de linha."  
+        ]);
+    }
+    return new SolicitacaoMail($solicitação);
+});
 
-Route::post('/imagem', [\App\Http\Controllers\ImagemController::class, 'store'])->name('imagem.store');
-Route::get('/imagem/{filename}', [\App\Http\Controllers\ImagemController::class, 'show'])->name('imagem.show');
+Route::get('/ver-dados', function () {
+    $dados = Solicitacao::orderBy('created_at', 'desc')->get();
+    return view('adminDebug', compact('dados'));
+});
