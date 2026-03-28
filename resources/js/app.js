@@ -6,6 +6,9 @@ import './mascaras/mascaraTelefone'
 
 import './mascaras/mascaraCep'
 
-import './mascaras/buscaCep'
+import './utilities/buscaCep'
+
+import './utilities/logicaRemocao'
 
 import.meta.glob(['../assets/**',]);
+
