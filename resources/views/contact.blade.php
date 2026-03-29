@@ -5,9 +5,9 @@
         <meta name="description" content="Site de orçamentos para aberturas de aluminio ">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/css/contact.css','resources/js/app.js'])
     </head>
-    <body class="corpo">
+    <body class="body">
         <header class="container-header">
             <a href="{{ route('home') }}" class="img-link-header">
                 <img src="{{ Vite::asset('resources/assets/img/logos/logo_alusim1.webp')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">

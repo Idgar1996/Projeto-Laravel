@@ -175,7 +175,7 @@ body {
 
 .footer {
     display: flex;
-    background-color: var(--cor-fonte);
+    background-color: var(--cor-footer);
     color: var(--cor-fundo);
     width: 100%;
     justify-content: space-between;

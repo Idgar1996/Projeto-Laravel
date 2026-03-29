@@ -5,7 +5,7 @@
         <meta name="description" content="Site de orçamentos para aberturas de aluminio ">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css','resources/css/mensagem.css', 'resources/js/app.js', 'resources/js/utilities/verificarDoc.js'])
     </head>
     <body>
         <header class="container-header">
@@ -63,7 +63,7 @@
                         </div>
                         <div class="input-dados">
                             <label for="documento">Documento:</label>
-                            <input type="text" name="documento" id="documento" required placeholder="Ex: 999.999.999-99 ou 99.999.999/9999-99">
+                            <input type="text" name="documento" id="documento" required placeholder="Ex: 999.999.999-99 ou 99.999.999/9999-99" class='input-doc'>
                         </div>
                         <div class="input-dados">
                             <label for="telefone">Telefone:</label>

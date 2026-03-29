@@ -42,7 +42,10 @@ Route::get('/preview-email', function() {
     return new SolicitacaoMail($solicitação);
 });
 
-Route::get('/ver-dados', function () {
-    $dados = Solicitacao::orderBy('created_at', 'desc')->get();
-    return view('adminDebug', compact('dados'));
+Route::middleware(['auth.basic'])->group(function() {
+
+    Route::get('/painelAdmin', function() {
+        $dados = Solicitacao::orderBy('created_at', 'asc')->get();
+        return view('adminDebug', compact('dados'));
+    });
 });

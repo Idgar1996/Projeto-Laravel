@@ -14,17 +14,20 @@
     /* Cores padrão */
     --cor-fundo: #f3f1f4;
     --cor-fonte: #333;
+    --cor-footer:#333;
     --cor-botao: #c60202;
     --cor-hover: #d32f2f;
     --cor-fundo-banner: #fdfbfc;
     --cor-divisoria: #e0e0e0;
-    --cor-testes: #27e327;
     --cor-botao-enviar: #02b902;
     --cor-botao-enviar-hover:#27e327;
 
     /* Bordas padrão */
     --raio-borda-botoes: 0.5rem;
     --raio-borda-imagens: 0.25rem;
+
+    /* Tamanho padrão ícones */
+    --altura-icone: 3.125rem;
 }
 * {
     padding: 0;

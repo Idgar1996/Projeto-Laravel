@@ -46,3 +46,18 @@ class User extends Authenticatable
         ];
     }
 }
+
+
+// App\Models\User::create([
+//     'name' => 'Nome do Socio',
+//     'email' => 'socio@alusim.com.br',
+//     'password' => Hash::make('senha_segura_aqui'),
+// ]);
+
+// php artisan tinker
+// $user = App\Models\User::where('email', 'seu-email@gmail.com')->first();
+// $user->password = Hash::make('nova_senha_123');
+// $user->save();
+
+// $user = App\Models\User::where('email', 'email_errado@teste.com')->first();
+// if ($user) { $user->delete(); }
