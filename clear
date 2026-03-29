@@ -1,0 +1,6 @@
+
+In TelescopeServiceProvider.php line 11:
+                                                                           
+  Class "Laravel\Telescope\TelescopeApplicationServiceProvider" not found  
+                                                                           
+

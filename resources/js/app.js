@@ -10,5 +10,7 @@ import './utilities/buscaCep'
 
 import './utilities/logicaRemocao'
 
+import './utilities/verificarDoc'
+
 import.meta.glob(['../assets/**',]);
 
