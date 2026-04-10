@@ -12,22 +12,30 @@
             <a href="{{ route('home') }}" class="img-link-header">
                 <img src="{{ Vite::asset('resources/assets/img/logos/logo_alusim1.webp')}}" alt="Logo Alusim" class="logo-in-header" title="Logo Alusim">
             </a>
-            <aside class="menu-aside">
-                    <nav class="menu-nav-in-aside">
-                        <div class="menu-item">
+            <nav class="menu-aside">
+                <div class="hamburguer-container">
+                    <div class="icone-hamburguer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="menu-nav-in-aside">
+                        <li>
                             <a href="{{ route('home')}}" class="links-in-aside">Home</a>
-                        </div>
-                        <div class='menu-item'>
+                        </li>
+                        <li>
                             <a href="{{ route('servicos')}}" class="links-in-aside">Fotos</a>
-                        </div>
-                        <div class="menu-item">
+                        </li>
+                        <li>
                             <a href="{{ route('about')}}" class="links-in-aside">Sobre nós</a>
-                        </div>
-                        <div class="menu-item">
+                        </li>
+                        <li>
                             <a href="{{ route('contact')}}" class="links-in-aside">Contato</a>
-                        </div>
-                    </nav>
-            </aside>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
         <main class="main">
             @if(session('success'))

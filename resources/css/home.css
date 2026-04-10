@@ -5,48 +5,84 @@
 
     .container-header {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        padding: 0 60px 0 60px;
+        padding: 0 1rem 0 2rem;
         width: 100%;
-        height: 110px;
+        height: auto;
+        min-height: 80px;
         background-color: var(--cor-fundo);
     }
     .img-link-header {
-        width: 50%;
+        width: auto;
     }
     .logo-in-header {
         height: 6.785rem;
     }
     .menu-aside {
-        display: flex;
-        align-items: center;
-        width: 50%;
-        height: 100%;
+        position: relative;
+        z-index: 100;
+    }
+    .icone-hamburguer {
+        width: 2.5rem;
+        height: 1.875rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 0.3125rem;
+    }
+    .icone-hamburguer span {
+        display: block;
+        height: 0.25rem;
+        width: 100%;
+        background-color: var(--cor-fonte);
+        border-radius: 2px;
+        transition: 0.3s;
     }
     .menu-nav-in-aside {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 15.625rem;
+        background-color: var(--cor-fundo-banner);
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(1.25rem);
+        transition: all 0.3s ease-in-out;
+    }
+    .hamburguer-container:hover .menu-nav-in-aside {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    .menu-nav-in-aside li {
+        list-style: none;
         width: 100%;
-        height: 100%;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: var(--fonte-subtitulo);
     }
     .links-in-aside {
         color: var(--cor-fonte);
         text-decoration: none;
-        font-size: var(--fonte-subtitulo);
+        font-size: var(--fonte-subtitulo2);
+        text-wrap: nowrap;
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
     }
     .links-in-aside:hover{
         color: var(--cor-hover);
     }
     .link-orcamento {
-        width: 10rem;
-        height: 3.125rem;
+        width: auto;
+        height: auto;
         background-color: var(--cor-botao);
-        font-size: var(--font-texto);
+        font-size: var(--font-link-orcamento);
         font-weight: bold;
         text-decoration: none;
         color: white;
@@ -55,6 +91,8 @@
         justify-content: center;
         border-radius: var(--raio-borda-botoes);
         transition: all 0.2s ease;
+        text-wrap: nowrap;
+        padding: 0.6rem 0.6rem;
     }
     .link-orcamento:hover {
         background-color: var(--cor-hover);
@@ -85,13 +123,16 @@
     }
     .texto-banner {
         position: absolute;
-        top: 40%;
-        left: 40%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         color: white;
         font-weight: bold;
         display: flex;
         flex-direction: column;
+        width: 90;
+        text-align: center;
+        align-items: center;
     }
     .texto-banner *:last-child{
         margin-top: 0.625rem;
@@ -111,6 +152,8 @@
 
     .banner2 {
         display: flex;
+        flex-direction: column;
+        gap: 2rem;
         max-width: 100%;
         align-items: center;
         justify-content: space-between;
@@ -125,7 +168,8 @@
         text-align: center;
         position: relative;
     }
-    .container-skill:not(:last-child)::after {
+    .container-skill::after {
+        display: none;
         content: "";
         position: absolute;
         right: -12%;
@@ -199,6 +243,19 @@
         padding: 1.125rem;
     }
 
+
+    @media screen and (min-width: 1024px) {
+        .banner2 {
+            flex-direction: row;
+        }
+        
+        .container-skill::after {
+            display: block;
+        }
+        .container-servicos {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
     /* Parametrização do footer */
     /* Inserção do logo */
     /* Slogan */

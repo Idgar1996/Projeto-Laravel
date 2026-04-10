@@ -4,12 +4,13 @@
 
 :root {
     /* Font-size padrão */
-    --fonte-titulo: 3.125rem;
-    --fonte-titulo2: 2.074rem;
-    --fonte-subtitulo: 1.728rem;
-    --fonte-subtitulo2: 1.44rem;
-    --fonte-subtitulo3: 1.2rem;
+    --fonte-titulo: clamp(2rem, 5vw, 3.125rem);
+    --fonte-titulo2: clamp(1.5rem, 6vw, 2.074rem);
+    --fonte-subtitulo: clamp(1.2rem, 4vw, 1.728rem);
+    --fonte-subtitulo2: clamp(0.9rem, 2.5vw, 1.6rem);
+    --fonte-subtitulo3: (1rem, 2vw, 1.2rem);
     --font-texto: 1rem;
+    --font-link-orcamento: clamp(0.8rem, 3vw, 1.1rem);
 
     /* Cores padrão */
     --cor-fundo: #f3f1f4;
@@ -34,4 +35,22 @@
     margin: 0;
     font-family: Arial,"Cabin", sans-serif;
     box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--cor-fundo);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    max-width:100%;
+    height: auto;
+    display: block;
 }

@@ -14,44 +14,80 @@ body {
 /* Menu lateral com os principais links de navegação entre as páginas do site */
 
 .container-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3.75rem 0 3.75rem;
-    width: 100%;
-    height: 6.785rem;
-    background-color: var(--cor-fundo);
-}
-.img-link-header {
-    width: 50%;
-}
-.logo-in-header {
-    height: 6.785rem;
-}
-.menu-aside {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-}
-.menu-nav-in-aside {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: var(--fonte-subtitulo);
-}
-.links-in-aside {
-    color: var(--cor-fonte);
-    text-decoration: none;
-    font-size: var(--fonte-subtitulo);
-}
-.links-in-aside:hover{
-    color: var(--cor-hover);
-}
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem 0 2rem;
+        width: 100%;
+        height: auto;
+        min-height: 80px;
+        background-color: var(--cor-fundo);
+    }
+    .img-link-header {
+        width: auto;
+    }
+    .logo-in-header {
+        height: 6.785rem;
+    }
+    .menu-aside {
+        position: relative;
+        z-index: 100;
+    }
+    .icone-hamburguer {
+        width: 2.5rem;
+        height: 1.875rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 0.3125rem;
+    }
+    .icone-hamburguer span {
+        display: block;
+        height: 0.25rem;
+        width: 100%;
+        background-color: var(--cor-fonte);
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .menu-nav-in-aside {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 15.625rem;
+        background-color: var(--cor-fundo-banner);
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(1.25rem);
+        transition: all 0.3s ease-in-out;
+    }
+    .hamburguer-container:hover .menu-nav-in-aside {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    .menu-nav-in-aside li {
+        list-style: none;
+        width: 100%;
+    }
+    .links-in-aside {
+        color: var(--cor-fonte);
+        text-decoration: none;
+        font-size: var(--fonte-subtitulo2);
+        text-wrap: nowrap;
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+    .links-in-aside:hover{
+        color: var(--cor-hover);
+    }
 /* Parametrização do main */
 /* Separação por sessão */
 /* Categorização por tipos de dados */

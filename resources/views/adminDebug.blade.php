@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <title>Visualizador de Dados - Alusim</title>
     <style>
