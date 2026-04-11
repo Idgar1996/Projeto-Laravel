@@ -42,7 +42,13 @@
         </header>
         <main class="main">
             <section class="banner1">
-                <img src="{{ Vite::asset('resources/assets/img/logos/modelo-home.webp') }}" alt="Imagem de apresentação com porta janela de correr sanfonada." class="img-banner">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="{{ Vite::asset('resources/assets/img/apresentacao/desktop.webp') }}">
+                    <source media="(min-width: 992px)" srcset="{{ Vite::asset('resources/assets/img/apresentacao/laptop.webp') }}">
+                    <source media="(min-width: 768px)" srcset="{{ Vite::asset('resources/assets/img/apresentacao/tablet.webp') }}">
+                    <img src="{{ Vite::asset('resources/assets/img/apresentacao/mobile.webp') }}" alt="Imagem de apresentação de porta janela sanfonada" class="img-banner" fetchptiority="high" width="600" height="400">
+
+                </picture>
                 <div class="texto-banner">
                     <h1>Esquadrias de alumínio <br> sob medida</h1>
                     <p>Qualidade, durabilidade e acabamento profissional.</p>
