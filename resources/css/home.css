@@ -151,32 +151,20 @@
     /* Anos de experiência */
 
     .banner2 {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
         max-width: 100%;
-        align-items: center;
-        justify-content: space-between;
         background-color: var(--cor-fundo-banner);
-        padding: 0 1.25rem 2.5rem 1.25rem;
+        padding: 2.5rem 1.25rem;
     }
     .container-skill {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 22%;
+        width: 100%;
         text-align: center;
         position: relative;
-    }
-    .container-skill::after {
-        display: none;
-        content: "";
-        position: absolute;
-        right: -12%;
-        top: 20%;
-        height: 16.625rem;
-        width: 0.125rem;
-        background-color: var(--cor-divisoria);
     }
     .container-skill img{
         width: 11.25rem;
@@ -187,7 +175,7 @@
     .container-skill p {
         font-size: var(--fonte-subtitulo3);
         text-align: center;
-        width: 60%;
+        width: 100%;
     }
     /* Parametrização do container de pré-visualização */
     /* Preview dos serviços oferecidos */
