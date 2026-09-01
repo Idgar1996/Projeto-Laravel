@@ -143,22 +143,24 @@ body {
 .input-dados input {
     padding: 0.625rem 0.250rem;
     border-radius: var(--raio-borda-botoes);
-    border-color: transparent;
+    border-color: var(--cor-borda-entry);
     font-size: var(--fonte-subtitulo3);
+    border-top-width: 0;
+    border-left-width: 0;
 }
 #estado select {
     padding: 0.5rem;
     width: 30%;
     background-color: var(--cor-fundo-banner);
     border-radius: var(--raio-borda-botoes);
-    border-color: transparent;
+    border-color: var(--cor-borda-entry);
 }
 #informacoes select {
     padding: 0.5rem;
     width: 50%;
     background-color: var(--cor-fundo-banner);
     border-radius: var(--raio-borda-botoes);
-    border-color: transparent;
+    border-color: var(--cor-borda-entry);
 }
 .container-mensagem {
     display: flex;
@@ -169,6 +171,7 @@ body {
     padding: 0.625rem;
     border-color: transparent;
     border-radius: var(--raio-borda-botoes);
+    border-color: var(--cor-borda-entry);
 }
 .container-botoes {
     display: flex;

@@ -46,6 +46,6 @@ Route::middleware(['auth.basic'])->group(function() {
 
     Route::get('/painelAdmin', function() {
         $dados = Solicitacao::orderBy('created_at', 'asc')->get();
-        return view('adminDebug', compact('dados'));
+        return view('admin.index', compact('dados'));
     });
 });
