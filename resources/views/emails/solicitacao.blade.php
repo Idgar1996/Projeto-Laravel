@@ -2,7 +2,7 @@
 <html>
 <head>
     <style>
-        body { font-family: sans-serif; color: #333; line-height: 1.6; }
+        body { font-family: "Inter "; color: #333; line-height: 1.6; }
         .container { max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
         .header { background-color: #003366; color: #ffffff; padding: 20px; text-align: center; }
         .content { padding: 20px; }

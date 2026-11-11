@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html lang="pt-br">
 <head>
     <title>Visualizador de Dados - Alusim</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+        body { font-family: "IBM Plex Sans"; padding: 20px; background: #f4f4f4; }
         table { width: 100%; background: #fff; box-shadow: 2px 4px 5px #33333380}
         th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; font-size: 14px; }
         th { background-color: #003366; color: white; }
