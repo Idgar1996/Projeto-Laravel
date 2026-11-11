@@ -115,6 +115,15 @@
     .banner1{
         position: relative;
     }
+
+    .banner1::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.65));
+        pointer-events: none;
+    }
+
     .img-banner {
         object-fit: cover;
         width: 100%;
@@ -124,24 +133,48 @@
     .texto-banner {
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: clamp(1.5rem, 8vw, 6rem);
+        right: clamp(1.5rem, 8vw, 6rem);
+        transform: translateY(-50%);
         color: white;
         font-weight: bold;
         display: flex;
         flex-direction: column;
-        width: 90;
-        text-align: center;
-        align-items: center;
+        width: 90%;
+        max-width: 44rem;
+        text-align: left;
+        align-items: flex-start;
     }
     .texto-banner *:last-child{
-        margin-top: 0.625rem;
+        margin-top: 1.75rem;
     }
     .texto-banner h1 {
         font-size: var(--fonte-titulo);
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
     }
     .texto-banner p {
         font-size: var(--fonte-subtitulo);
+        font-weight: 400;
+    }
+    .texto-banner .link-orcamento {
+        padding: 0.875rem 2rem;
+        min-height: 3rem;
+    }
+    .botoes-banner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    .texto-banner .botoes-banner .link-orcamento {
+        margin-top:0;
+    }
+    .texto-banner .link-secundario {
+        background-color: transparent;
+        box-shadow: 0 0 0 2px #ffffff;
+    }
+    .texto-banner .link-secundario:hover {
+        background-color: rgba(255, 255, 255, 0.15);
     }
 
     /* Parametrização do banner 2 com as principais características da empresa: */

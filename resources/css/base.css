@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 /* Parametros iniciais para "zerar" certas medidas automáticas */
 
@@ -8,24 +8,24 @@
     --fonte-titulo2: clamp(1.5rem, 6vw, 2.074rem);
     --fonte-subtitulo: clamp(1.2rem, 4vw, 1.728rem);
     --fonte-subtitulo2: clamp(0.9rem, 2.5vw, 1.6rem);
-    --fonte-subtitulo3: (1rem, 2vw, 1.2rem);
+    --fonte-subtitulo3: clamp(1rem, 2vw, 1.2rem);
     --font-texto: 1rem;
     --font-link-orcamento: clamp(0.8rem, 3vw, 1.1rem);
 
     /* Cores padrão */
-    --cor-fundo: #f3f1f4;
-    --cor-fonte: #333;
-    --cor-footer:#333;
-    --cor-botao: #c60202;
-    --cor-hover: #d32f2f;
-    --cor-fundo-banner: #fdfbfc;
-    --cor-divisoria: #e0e0e0;
-    --cor-botao-enviar: #02b902;
-    --cor-botao-enviar-hover:#27e327;
-    --cor-borda-entry:#707070;
+    --cor-fundo: #f8fafc;
+    --cor-fonte: #1e293b;
+    --cor-footer:#0f172a;
+    --cor-botao: #b91c1c;
+    --cor-hover: #991b1b;
+    --cor-fundo-banner: #ffffff;
+    --cor-divisoria: #e2e8f0;
+    --cor-botao-enviar: #15803d;
+    --cor-botao-enviar-hover:#166534;
+    --cor-borda-entry:#64748b;
 
     /* Bordas padrão */
-    --raio-borda-botoes: 0.5rem;
+    --raio-borda-botoes: 0.375rem;
     --raio-borda-imagens: 0.25rem;
 
     /* Tamanho padrão ícones */
@@ -34,7 +34,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial,"Cabin", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
     box-sizing: border-box;
 }
 
