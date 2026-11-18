@@ -34,14 +34,17 @@
                 <div class="container-skill">
                     <img src="{{ Vite::asset('resources/assets/img/icones/profissionais-ajustado.webp')}}" alt="Icone 'Instalação profissional'">
                     <h2>Instalação profissional</h2>
+                    <p>Equipe capacitada para instalar com precisão</p>
                 </div>
                 <div class="container-skill">
                     <img src="{{ Vite::asset('resources/assets/img/icones/acabamento-ajustado.webp')}}" alt="Icone 'Acabamento premium'">
                     <h2>Acabamento premium</h2>
+                    <p>Materiais de qualidade e acabamento caprichado</p>
                 </div>
                 <div class="container-skill">
-                    <img src="{{ Vite::asset('resources/assets/img/icones/experiancia-ajustado.webp')}}" alt="Icone 'Anos de experiência'">
+                    <span class="numero-destaque">+10</span>
                     <h2>Anos de experiência</h2>
+                    <p>Fabricando esquadrias de alumínio desde 2013</p>
                 </div>
             </section>
             <section class="banner3">
